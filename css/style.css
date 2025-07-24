@@ -1,0 +1,440 @@
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Regular.woff2") format("woff2"), url("../fonts/Causten-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Medium.woff2") format("woff2"), url("../fonts/Causten-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Light.woff2") format("woff2"), url("../fonts/Causten-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-Bold.woff2") format("woff2"), url("../fonts/Causten-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Causten";
+  src: url("../fonts/Causten-SemiBold.woff2") format("woff2"), url("../fonts/Causten-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-45Regular.woff2") format("woff2"), url("../fonts/CoreSansC-45Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-55Medium.woff2") format("woff2"), url("../fonts/CoreSansC-55Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-65Bold.woff2") format("woff2"), url("../fonts/CoreSansC-65Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-75ExtraBold.woff2") format("woff2"), url("../fonts/CoreSansC-75ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoreSans";
+  src: url("../fonts/CoreSansC-85Heavy.woff2") format("woff2"), url("../fonts/CoreSansC-85Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+[class*=_icon-]::before {
+  display: inline-block;
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-star:before {
+  content: "\e914";
+}
+
+._icon-star-active:before {
+  content: "\e91c";
+}
+
+._icon-lock:before {
+  content: "\e91d";
+}
+
+._icon-a-down:before {
+  content: "\e900";
+}
+
+._icon-a-left:before {
+  content: "\e901";
+}
+
+._icon-a-right:before {
+  content: "\e902";
+}
+
+._icon-a-up:before {
+  content: "\e903";
+}
+
+._icon-bags:before {
+  content: "\e904";
+}
+
+._icon-cart:before {
+  content: "\e905";
+}
+
+._icon-ch-down:before {
+  content: "\e906";
+}
+
+._icon-ch-left:before {
+  content: "\e907";
+}
+
+._icon-ch-right:before {
+  content: "\e908";
+}
+
+._icon-ch-up:before {
+  content: "\e909";
+}
+
+._icon-close:before {
+  content: "\e90a";
+}
+
+._icon-comment:before {
+  content: "\e90b";
+}
+
+._icon-credit-cart:before {
+  content: "\e90c";
+}
+
+._icon-exit:before {
+  content: "\e90d";
+}
+
+._icon-eye:before {
+  content: "\e90e";
+}
+
+._icon-eye-border:before {
+  content: "\e90f";
+}
+
+._icon-eye-hide:before {
+  content: "\e910";
+}
+
+._icon-favorite:before {
+  content: "\e911";
+}
+
+._icon-filter:before {
+  content: "\e912";
+}
+
+._icon-free-shiping:before {
+  content: "\e913";
+}
+
+._icon-play:before {
+  content: "\e915";
+}
+
+._icon-play-circle:before {
+  content: "\e916";
+}
+
+._icon-search:before {
+  content: "\e917";
+}
+
+._icon-s-facebook:before {
+  content: "\e918";
+}
+
+._icon-s-instagram:before {
+  content: "\e919";
+}
+
+._icon-size-fit:before {
+  content: "\e91a";
+}
+
+._icon-s-linkedin:before {
+  content: "\e91b";
+}
+
+._icon-s-twitter:before {
+  content: "\e91e";
+}
+
+._icon-trash:before {
+  content: "\e91f";
+}
+
+._icon-truck:before {
+  content: "\e920";
+}
+
+._icon-user:before {
+  content: "\e921";
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  color: inherit;
+  background-color: transparent;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.title {
+  font-family: "Core Sans C", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.0425rem;
+  line-height: 1.1;
+  color: #3c4242;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.5555555556em;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (min-width: 79.375em) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 79.375em) {
+  @supports (font-size: clamp( 1.5rem , 1.2473684211rem  +  1.2631578947vw , 2.25rem )) {
+    .title {
+      font-size: clamp( 1.5rem , 1.2473684211rem  +  1.2631578947vw , 2.25rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.5rem , 1.2473684211rem  +  1.2631578947vw , 2.25rem )) {
+    .title {
+      font-size: calc(1.5rem + 0.75 * (100vw - 20rem) / 59.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+.title::before {
+  content: "";
+  border-radius: 0.625rem;
+  background-color: #8a33fd;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 0.375rem;
+          flex: 0 0 0.375rem;
+  width: 0.375rem;
+  height: 0.8333333333em;
+  margin-top: 0.1388888889em;
+}
+
+.item-product {
+  display: grid;
+  gap: 1.875rem;
+}
+.item-product--category {
+  gap: 1.5625rem;
+}
+.item-product__picture-link {
+  display: block;
+}
+.item-product__image {
+  aspect-ratio: 282/370;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.75rem;
+}
+.item-product--category .item-product__image {
+  aspect-ratio: 270/393;
+}
+.item-product__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.item-product__right-wrap {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: grid;
+  gap: 0.3125rem;
+}
+.item-product__title {
+  font-weight: 600;
+  color: #3c4242;
+}
+.item-product--category .item-product__title {
+  font-weight: 700;
+  font-size: 1.0625rem;
+}
+.item-product__text {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #807d7e;
+}
+.item-product__left-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.item-product__price {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #3c4242;
+  padding: 0.625rem 1.25rem;
+  background-color: #f6f6f6;
+  border-radius: 0.5rem;
+}
+
+body {
+  font-family: "Causten";
+  color: #807d7e;
+}
+
+.wrapper {
+  overflow: clip;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+.wrapper main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+[class*=__container] {
+  max-width: 79.375rem;
+  margin: 0 auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
