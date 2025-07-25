@@ -22,6 +22,7 @@
 }
 
 .item-product {
+  position: relative;
   display: grid;
   gap: toRem(30);
 
@@ -53,6 +54,7 @@
 
   &__body {
     display: flex;
+    column-gap: toRem(35);
   }
 
   // .item-product__right-wrap
@@ -70,6 +72,8 @@
     font-weight: 600;
     color: $darkColor;
 
+    min-width: 0;
+
     .item-product--category & {
       font-weight: 700;
       font-size: toRem(17);
@@ -78,7 +82,18 @@
 
   // .item-product__link-title
 
-  // &__link-title {}
+  &__link-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 
   // .item-product__text
 
@@ -93,11 +108,21 @@
   &__left-wrap {
     display: flex;
     align-self: center;
+
+
+    @media (any-hover: hover) {
+      &:hover .item-product__link {
+        color: $favoriteColor;
+      }
+    }
   }
 
   // .item-product__link
 
-  // &__link {}
+  &__link {
+    transition: color 0.3s;
+    font-size: toRem(14);
+  }
 
   // .item-product__price
 
@@ -108,5 +133,112 @@
     padding: toRem(10) toRem(20);
     background-color: $liteColor;
     border-radius: toRem(8);
+  }
+
+  // .item-product__favorite
+
+
+  &__favorite {
+    position: absolute;
+    top: toRem(26);
+    right: toRem(20);
+    width: toRem(34);
+    height: toRem(34);
+    border-radius: 50%;
+    background-color: $favoriteBackground;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $favoriteColor;
+      }
+    }
+  }
+
+}
+
+.button {
+  font-weight: 500;
+  font-size: toRem(18);
+  color: $favoriteBackground;
+  line-height: 1.2222222;
+  border-radius: toRem(8);
+  padding: toRem(16) toRem(20);
+  background-color: $purpleColor;
+  transition: all 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: 0 toRem(3) toRem(4) 0 rgba(0, 0, 0, 0.1);
+      background-color: $accentActive;
+    }
+
+    &:focus {
+      background-color: $accentActive;
+    }
+
+    &:disabled {
+      color: $mainColor;
+      background-color: #eaeaea;
+      cursor: default;
+      box-shadow: none;
+    }
+
+  }
+
+  // .button--border
+  &--border {
+    border: toRem(1) solid #bebcbd;
+    background-color: $favoriteBackground;
+    color: $darkColor;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $purpleColor;
+        background-color: $favoriteBackground;
+        box-shadow: none;
+      }
+
+      &:focus {
+        color: $purpleColor;
+        background-color: $favoriteBackground;
+        border: toRem(1) solid $purpleColor;
+      }
+
+      &:disabled {
+        color: $mainColor;
+        background-color: #eaeaea;
+        border: toRem(1) solid transparent;
+      }
+
+    }
+  }
+
+  // .button--white
+  &--white {
+    background-color: $favoriteBackground;
+    color: $darkColor;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(102, 32, 193, 0.03);
+        color: $purpleColor ;
+      }
+
+      &:focus {
+        background-color: rgba(102, 32, 193, 0.03);
+        color: $purpleColor ;
+        box-shadow: none;
+      }
+
+      &:disabled {
+        background-color: $favoriteBackground;
+        color: $mainColor;
+      }
+    }
+
   }
 }
