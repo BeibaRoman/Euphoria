@@ -13,31 +13,38 @@ $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 
-// Кольори
+// Colors
 $mainColor: #807d7e;
 $darkColor: #3c4242;
 $purpleColor: #8a33fd;
 $liteColor: #f6f6f6;
-$favoriteColor: red;
-$favoriteBackground: #ffffff;
-$accentActive: #6620c1;
 
-// Функції
+
+
+// Functions
 @import "_functions.scss";
-// Шрифти
+// Fonts
 @import "_fonts.scss";
-// Іконки
+// Icons
 @import "_icons.scss";
-// Обнулення
+// Reset
 @import "_reset.scss";
-// Компоненти
+// Components
 @import "_common.scss";
+// Header
+@import "_header.scss";
 
 
 
 body {
   font-family: "Causten";
   color: $mainColor;
+
+  &.menu-open {
+    overflow: hidden;
+    touch-action: none;
+    overscroll-behavior: none;
+  }
 }
 
 

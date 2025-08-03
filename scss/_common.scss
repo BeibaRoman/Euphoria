@@ -112,7 +112,7 @@
 
     @media (any-hover: hover) {
       &:hover .item-product__link {
-        color: $favoriteColor;
+        color: red;
       }
     }
   }
@@ -145,7 +145,7 @@
     width: toRem(34);
     height: toRem(34);
     border-radius: 50%;
-    background-color: $favoriteBackground;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,7 +153,7 @@
 
     @media (any-hover: hover) {
       &:hover {
-        color: $favoriteColor;
+        color: red;
       }
     }
   }
@@ -163,7 +163,7 @@
 .button {
   font-weight: 500;
   font-size: toRem(18);
-  color: $favoriteBackground;
+  color: #ffffff;
   line-height: 1.2222222;
   border-radius: toRem(8);
   padding: toRem(16) toRem(20);
@@ -173,11 +173,11 @@
   @media (any-hover: hover) {
     &:hover {
       box-shadow: 0 toRem(3) toRem(4) 0 rgba(0, 0, 0, 0.1);
-      background-color: $accentActive;
+      background-color: #6620c1;
     }
 
     &:focus {
-      background-color: $accentActive;
+      background-color: #6620c1;
     }
 
     &:disabled {
@@ -192,19 +192,19 @@
   // .button--border
   &--border {
     border: toRem(1) solid #bebcbd;
-    background-color: $favoriteBackground;
+    background-color: #ffffff;
     color: $darkColor;
 
     @media (any-hover: hover) {
       &:hover {
         color: $purpleColor;
-        background-color: $favoriteBackground;
+        background-color: #ffffff;
         box-shadow: none;
       }
 
       &:focus {
         color: $purpleColor;
-        background-color: $favoriteBackground;
+        background-color: #ffffff;
         border: toRem(1) solid $purpleColor;
       }
 
@@ -219,7 +219,7 @@
 
   // .button--white
   &--white {
-    background-color: $favoriteBackground;
+    background-color: #ffffff;
     color: $darkColor;
 
     @media (any-hover: hover) {
@@ -235,7 +235,7 @@
       }
 
       &:disabled {
-        background-color: $favoriteBackground;
+        background-color: #ffffff;
         color: $mainColor;
       }
     }
