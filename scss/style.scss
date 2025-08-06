@@ -33,8 +33,13 @@ $liteColor: #f6f6f6;
 @import "_common.scss";
 // Header
 @import "_header.scss";
+/* ======================================================== */
+// Hero
+@import "_hero.scss";
+/* ======================================================== */
 // Footer
 @import "_footer.scss";
+
 
 
 
@@ -70,4 +75,12 @@ body {
   margin: 0 auto;
   padding-left: toRem(15);
   padding-right: toRem(15);
+}
+
+// Main
+.page {
+
+  // .page__hero
+
+  &__hero {}
 }

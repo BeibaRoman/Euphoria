@@ -161,6 +161,7 @@
 }
 
 .button {
+  font-family: "Causten";
   font-weight: 500;
   font-size: toRem(18);
   color: #ffffff;
@@ -169,6 +170,7 @@
   padding: toRem(16) toRem(20);
   background-color: $purpleColor;
   transition: all 0.3s;
+  text-align: center;
 
   @media (any-hover: hover) {
     &:hover {
@@ -224,8 +226,8 @@
 
     @media (any-hover: hover) {
       &:hover {
-        background-color: rgba(102, 32, 193, 0.03);
-        color: $purpleColor ;
+        background-color: $purpleColor;
+        color: #ffffff;
       }
 
       &:focus {
