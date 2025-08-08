@@ -592,7 +592,8 @@ body.menu-open {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.625rem 0rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
 }
 @media (min-width: 79.375em) {
   .header__container {

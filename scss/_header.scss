@@ -15,7 +15,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: toRem(10) toRem(0);
+    padding-top: toRem(10);
+    padding-bottom: toRem(10);
 
     @include adaptiveValue("min-height", 108, 65);
     @include adaptiveValue("column-gap", 76, 10, 0, $containerWidth, 991.98);
