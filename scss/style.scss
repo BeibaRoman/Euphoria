@@ -89,6 +89,15 @@ body {
   // .page__hero
 
   &__hero {}
+
+  // .page__deals
+
+  &__deals {}
+
+  // .page__new
+
+  &__new {}
+
 }
 
 
@@ -101,6 +110,8 @@ body {
 @import "_hero.scss";
 // Deals
 @import "_deals.scss";
+// new
+@import "_new.scss";
 /* ======================================================== */
 // Footer
 @import "_footer.scss";
