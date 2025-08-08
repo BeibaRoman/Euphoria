@@ -29,16 +29,7 @@ $liteColor: #f6f6f6;
 @import "_icons.scss";
 // Reset
 @import "_reset.scss";
-// Components
-@import "_common.scss";
-// Header
-@import "_header.scss";
-/* ======================================================== */
-// Hero
-@import "_hero.scss";
-/* ======================================================== */
-// Footer
-@import "_footer.scss";
+
 
 
 
@@ -84,3 +75,15 @@ body {
 
   &__hero {}
 }
+
+
+// Components
+@import "_common.scss";
+// Header
+@import "_header.scss";
+/* ======================================================== */
+// Hero
+@import "_hero.scss";
+/* ======================================================== */
+// Footer
+@import "_footer.scss";

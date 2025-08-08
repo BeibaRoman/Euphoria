@@ -299,6 +299,43 @@ textarea {
           appearance: none;
 }
 
+body {
+  font-family: "Causten";
+  color: #807d7e;
+}
+body.menu-open {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
+.wrapper {
+  overflow: clip;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+.wrapper main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+[class*=__container] {
+  max-width: 79.375rem;
+  margin: 0 auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
 .title {
   font-family: "Core Sans C", sans-serif;
   font-weight: 600;
@@ -424,8 +461,8 @@ textarea {
   }
 }
 .item-product__link {
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
   font-size: 0.875rem;
 }
 .item-product__price {
@@ -453,8 +490,8 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 @media (any-hover: hover) {
   .item-product__favorite:hover {
@@ -471,8 +508,8 @@ textarea {
   border-radius: 0.5rem;
   padding: 1rem 1.25rem;
   background-color: #8a33fd;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-align: center;
 }
 @media (any-hover: hover) {
@@ -1177,20 +1214,20 @@ textarea {
   }
 }
 @media (min-width: 20em) and (max-width: 79.375em) {
-  @supports (padding-top: clamp( 3.75rem , 2.2763157895rem  +  7.3684210526vw , 8.125rem )) {
+  @supports (padding-top: clamp( 5rem , 3.9473684211rem  +  5.2631578947vw , 8.125rem )) {
     .slide-hero__body {
-      padding-top: clamp( 3.75rem , 2.2763157895rem  +  7.3684210526vw , 8.125rem );
+      padding-top: clamp( 5rem , 3.9473684211rem  +  5.2631578947vw , 8.125rem );
     }
   }
-  @supports not (padding-top: clamp( 3.75rem , 2.2763157895rem  +  7.3684210526vw , 8.125rem )) {
+  @supports not (padding-top: clamp( 5rem , 3.9473684211rem  +  5.2631578947vw , 8.125rem )) {
     .slide-hero__body {
-      padding-top: calc(3.75rem + 4.375 * (100vw - 20rem) / 59.375);
+      padding-top: calc(5rem + 3.125 * (100vw - 20rem) / 59.375);
     }
   }
 }
 @media (max-width: 20em) {
   .slide-hero__body {
-    padding-top: 3.75rem;
+    padding-top: 5rem;
   }
 }
 @media (min-width: 79.375em) {
@@ -1255,20 +1292,20 @@ textarea {
   }
 }
 @media (min-width: 20em) and (max-width: 79.375em) {
-  @supports (gap: clamp( 0.9375rem , 0.4111842105rem  +  2.6315789474vw , 2.5rem )) {
+  @supports (gap: clamp( 1.25rem , 0.8289473684rem  +  2.1052631579vw , 2.5rem )) {
     .slide-hero__body {
-      gap: clamp( 0.9375rem , 0.4111842105rem  +  2.6315789474vw , 2.5rem );
+      gap: clamp( 1.25rem , 0.8289473684rem  +  2.1052631579vw , 2.5rem );
     }
   }
-  @supports not (gap: clamp( 0.9375rem , 0.4111842105rem  +  2.6315789474vw , 2.5rem )) {
+  @supports not (gap: clamp( 1.25rem , 0.8289473684rem  +  2.1052631579vw , 2.5rem )) {
     .slide-hero__body {
-      gap: calc(0.9375rem + 1.5625 * (100vw - 20rem) / 59.375);
+      gap: calc(1.25rem + 1.25 * (100vw - 20rem) / 59.375);
     }
   }
 }
 @media (max-width: 20em) {
   .slide-hero__body {
-    gap: 0.9375rem;
+    gap: 1.25rem;
   }
 }
 @media (min-width: 25em) {
@@ -1996,40 +2033,4 @@ textarea {
   .popular-categories__list {
     row-gap: 0.3125rem;
   }
-}
-body {
-  font-family: "Causten";
-  color: #807d7e;
-}
-body.menu-open {
-  overflow: hidden;
-  -ms-touch-action: none;
-      touch-action: none;
-  -ms-scroll-chaining: none;
-      overscroll-behavior: none;
-}
-
-.wrapper {
-  overflow: clip;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 100%;
-}
-
-.wrapper main {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-[class*=__container] {
-  max-width: 79.375rem;
-  margin: 0 auto;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
 }

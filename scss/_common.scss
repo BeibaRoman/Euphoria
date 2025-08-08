@@ -120,7 +120,7 @@
   // .item-product__link
 
   &__link {
-    transition: color 0.3s;
+    transition: color 0.3s ease-in-out;
     font-size: toRem(14);
   }
 
@@ -149,7 +149,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: color 0.3s;
+    transition: color 0.3s ease-in-out;
 
     @media (any-hover: hover) {
       &:hover {
@@ -169,7 +169,7 @@
   border-radius: toRem(8);
   padding: toRem(16) toRem(20);
   background-color: $purpleColor;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
   text-align: center;
 
   @media (any-hover: hover) {

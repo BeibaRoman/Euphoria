@@ -103,7 +103,7 @@
   // .slide-hero__body
 
   &__body {
-    @include adaptiveValue("padding-top", 130, 60);
+    @include adaptiveValue("padding-top", 130, 80);
     @include adaptiveValue("padding-bottom", 130, 100);
     @include adaptiveValue("margin-left", 85, 40, 2, $containerWidth, 768);
     @include adaptiveValue("margin-right", 85, 40, 2, $containerWidth, 768);
@@ -111,7 +111,7 @@
     color: #fff;
     display: grid;
 
-    @include adaptiveValue("gap", 40, 15);
+    @include adaptiveValue("gap", 40, 20);
 
 
     @media (min-width: toEm(400)) {
