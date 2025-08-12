@@ -111,6 +111,15 @@ body {
     @include adaptiveValue("padding-bottom", 50, 15);
   }
 
+
+  // .page__fashion
+
+  &__fashion {
+    @include adaptiveValue("padding-top", 50, 15);
+    @include adaptiveValue("padding-bottom", 50, 15);
+  }
+
+
 }
 
 
@@ -127,6 +136,8 @@ body {
 @import "_new.scss";
 // save
 @import "_save.scss";
+// fashion
+@import "_fashion.scss";
 /* ======================================================== */
 // Footer
 @import "_footer.scss";
