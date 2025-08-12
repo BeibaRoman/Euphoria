@@ -757,7 +757,7 @@ body.menu-open {
 }
 @media (any-hover: hover) {
   .item-product__left-wrap:hover .item-product__link {
-    color: red;
+    color: #000;
   }
 }
 .item-product__link {
