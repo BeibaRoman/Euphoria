@@ -120,6 +120,21 @@ body {
   }
 
 
+  // .page__category
+
+  &__category {
+    @include adaptiveValue("padding-top", 50, 15);
+    @include adaptiveValue("padding-bottom", 50, 15);
+  }
+
+  // .page__brands
+
+  &__brands {
+    @include adaptiveValue("padding-top", 50, 15);
+    @include adaptiveValue("padding-bottom", 50, 15);
+  }
+
+
 }
 
 
@@ -138,6 +153,10 @@ body {
 @import "_save.scss";
 // fashion
 @import "_fashion.scss";
+// category
+@import "_category.scss";
+// brands
+@import "_brands.scss";
 /* ======================================================== */
 // Footer
 @import "_footer.scss";

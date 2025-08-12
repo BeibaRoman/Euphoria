@@ -1,0 +1,28 @@
+.category {
+
+  // .category__container
+
+  &__container {}
+
+  // .category__title
+
+  &__title {}
+
+  // .category__items
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(toRem(250), 1fr));
+    row-gap: toRem(30);
+    @include adaptiveValue("column-gap", 50, 20);
+
+    @media (max-width: toEm(560)) {
+      grid-template-columns: repeat(auto-fill, minmax(toRem(200), 1fr));
+    }
+
+    @media (max-width: toEm(479.98)) {
+      grid-template-columns: repeat(auto-fill, minmax(toRem(180), 1fr));
+    }
+
+  }
+}
