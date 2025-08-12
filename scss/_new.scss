@@ -1,6 +1,5 @@
 .new {
-  @include adaptiveValue("padding-top", 50, 15);
-  @include adaptiveValue("padding-bottom", 50, 15);
+
 
   // .new__container
 
@@ -8,11 +7,7 @@
 
   // .new__title
 
-  &__title {
-    &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 70, 20);
-    }
-  }
+  &__title {}
 
   // .new__slider
 

@@ -92,11 +92,24 @@ body {
 
   // .page__deals
 
-  &__deals {}
+  &__deals {
+    @include adaptiveValue("padding-top", 130, 30);
+    @include adaptiveValue("padding-bottom", 50, 15);
+  }
 
   // .page__new
 
-  &__new {}
+  &__new {
+    @include adaptiveValue("padding-top", 50, 15);
+    @include adaptiveValue("padding-bottom", 50, 15);
+  }
+
+  // .page__save
+
+  &__save {
+    @include adaptiveValue("padding-top", 50, 15);
+    @include adaptiveValue("padding-bottom", 50, 15);
+  }
 
 }
 
@@ -112,6 +125,8 @@ body {
 @import "_deals.scss";
 // new
 @import "_new.scss";
+// save
+@import "_save.scss";
 /* ======================================================== */
 // Footer
 @import "_footer.scss";

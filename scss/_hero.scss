@@ -91,6 +91,7 @@
 .swiper-wrapper {}
 
 .slide-hero {
+
   position: relative;
 
   // .slide-hero__container
@@ -191,7 +192,5 @@
     &--top-right {
       object-position: 76% top;
     }
-
-
   }
 }

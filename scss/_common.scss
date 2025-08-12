@@ -19,6 +19,14 @@
     height: toEm(30, 36);
     margin-top: toEm(5, 36);
   }
+
+  &--margin {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 70, 20);
+    }
+  }
+
+
 }
 
 .item-product {
@@ -223,6 +231,7 @@
   &--white {
     background-color: #ffffff;
     color: $darkColor;
+    transition: all 0.3s ease-in-out;
 
     @media (any-hover: hover) {
       &:hover {
