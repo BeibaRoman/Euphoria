@@ -135,6 +135,17 @@ body {
   }
 
 
+  // .page__feedback
+
+  &__feedback {
+    @include adaptiveValue("padding-top", 50, 15);
+    @include adaptiveValue("padding-bottom", 100, 30);
+  }
+
+
+
+
+
 }
 
 
@@ -157,6 +168,8 @@ body {
 @import "_category.scss";
 // brands
 @import "_brands.scss";
+// feedback
+@import "_feedback.scss";
 /* ======================================================== */
 // Footer
 @import "_footer.scss";

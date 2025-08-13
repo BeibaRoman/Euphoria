@@ -162,3 +162,37 @@ if (newSlider) {
     },
   });
 }
+
+// Feedback slider
+
+const feedbackSlider = document.querySelector(".feedback");
+if (feedbackSlider) {
+  new Swiper(".feedback__slider", {
+    // Optional parameters
+    loop: true,
+    // autoHeight: true,
+    speed: 800,
+    spaceBetween: 23,
+    slidesPerView: 3,
+    // If we need pagination
+    pagination: {
+      el: ".feedback__pagination",
+      clickable: true,
+    },
+    // Responsive breakpoints
+    breakpoints: {
+      320: {
+        slidesPerView: 1.3,
+        spaceBetween: 15,
+      },
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 23,
+      },
+    },
+  });
+}
