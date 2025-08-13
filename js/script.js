@@ -196,3 +196,63 @@ if (feedbackSlider) {
     },
   });
 }
+
+/* rating */
+document.addEventListener("DOMContentLoaded", () => {
+  const ratings = document.querySelectorAll(".rating");
+
+  ratings.forEach((root) => {
+    const group = root.querySelector(".rating__group");
+    const inputs = root.querySelectorAll(".rating__input");
+    const output = root.querySelector(".rating__value");
+    const storageKey = root.dataset.storageKey;
+    const initial = Number(root.dataset.initial || 0);
+
+    // 1) Відновити значення з localStorage (пріоритетніше за data-initial)
+    let saved = null;
+    if (storageKey) {
+      try {
+        saved = Number(localStorage.getItem(storageKey));
+      } catch {
+        /* ignore */
+      }
+    }
+
+    const setValue = (val) => {
+      // Позначити потрібний input як checked
+      const target = [...inputs].find((i) => Number(i.value) === Number(val));
+      if (target) target.checked = true;
+
+      // Оновити output
+      if (output) output.value = String(val);
+
+      // Зберегти
+      if (storageKey) {
+        try {
+          localStorage.setItem(storageKey, String(val));
+        } catch {
+          /* ignore */
+        }
+      }
+
+      // Кастомна подія (можеш ловити її зовні)
+      root.dispatchEvent(
+        new CustomEvent("rating:change", {
+          bubbles: true,
+          detail: { value: Number(val) },
+        })
+      );
+    };
+
+    // 2) Початкове значення
+    const startVal = saved || initial || 0;
+    if (startVal) setValue(startVal);
+    else if (output) output.value = "0";
+
+    // 3) Слухачі змін
+    group.addEventListener("change", (e) => {
+      const val = e.target?.value;
+      if (val) setValue(val);
+    });
+  });
+});

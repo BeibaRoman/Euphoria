@@ -256,3 +256,92 @@
 
   }
 }
+
+
+/* =========================================rating========================= */
+
+
+$star-empty: url('../image/star/empty-star.svg'); // або .png
+$star-full: url('../image/star/full-star.svg');
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: toRem(8);
+
+  &__group {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    gap: toRem(4);
+  }
+
+  &__input {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+    border: 0;
+    padding: 0;
+    margin: -1px;
+  }
+
+  &__star {
+    display: inline-block;
+    background-image: $star-empty;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.12s ease;
+
+    // Розмір зірки адаптивний від 32px до 20px
+    @include adaptiveValue("inline-size", 24, 18);
+    @include adaptiveValue("block-size", 24, 18);
+
+    &:has(+ .rating__input:focus-visible),
+    &:focus-visible {
+      outline: toRem(2) solid currentColor;
+      outline-offset: toRem(2);
+    }
+  }
+
+  &__input:checked~.rating__star,
+  &__star:hover,
+  &__star:hover~.rating__star {
+    background-image: $star-full;
+  }
+
+  &__star:hover {
+    transform: scale(1.05);
+  }
+
+  &__value {
+    font-size: toRem(14);
+    min-inline-size: 2ch;
+    text-align: right;
+  }
+
+  // Для екранів ≤ 320px — зірки ще трохи менші та з меншими відступами
+  @media (max-width: toEm(320)) {
+    gap: toRem(6);
+
+    &__group {
+      gap: toRem(2);
+    }
+
+    &__star {
+      inline-size: toRem(18);
+      block-size: toRem(18);
+    }
+
+    &__value {
+      font-size: toRem(12);
+    }
+  }
+}
