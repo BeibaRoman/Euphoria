@@ -145,12 +145,28 @@ body {
 
 
 
+  // .page__catalog
+
+  &__catalog {
+    .catalog__categories {
+      @include adaptiveValue("padding-top", 50, 15);
+      @include adaptiveValue("padding-bottom", 50, 15);
+    }
+
+  }
+
+
+
+
+
 
 }
 
 
 // Components
 @import "_common.scss";
+@import "_nouislider.scss";
+@import "_filter.scss";
 // Header
 @import "_header.scss";
 /* ======================================================== */
@@ -170,6 +186,11 @@ body {
 @import "_brands.scss";
 // feedback
 @import "_feedback.scss";
+/* ======================================================== */
+// pages
+// catalog
+@import "_catalog.scss";
+
 /* ======================================================== */
 // Footer
 @import "_footer.scss";

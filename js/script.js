@@ -19,7 +19,9 @@ const spollers = document.querySelectorAll("[data-spoller]");
 
 if (spollers.length) {
   spollers.forEach((spoller) => {
-    spoller.nextElementSibling.hidden = true;
+    spoller.dataset.spoller !== "open"
+      ? (spoller.nextElementSibling.hidden = true)
+      : spoller.classList.add("active");
   });
 }
 
@@ -256,3 +258,95 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// noUiSlider
+const filterRange = document.querySelector(".price-filter__range");
+
+if (filterRange) {
+  const filterRangeFrom = document.querySelector(".price-filter__input--from");
+  const filterRangeTo = document.querySelector(".price-filter__input--to");
+  noUiSlider.create(filterRange, {
+    start: [0, 100],
+    connect: true,
+    range: {
+      min: 0,
+      max: 100,
+    },
+    format: wNumb({
+      decimals: 3,
+      thousand: ".",
+      prefix: "$",
+    }),
+  });
+
+  filterRange.noUiSlider.on("update", function (values, handle) {
+    filterRangeFrom.value = values[0];
+    filterRangeTo.value = values[1];
+  });
+
+  filterRangeFrom;
+  addEventListener("change", function () {
+    filterRange.noUiSlider.setHandle(0, filterRangeFrom.value);
+  });
+  filterRangeTo.addEventListener("change", function () {
+    filterRange.noUiSlider.setHandle(1, filterRangeTo.value);
+  });
+}
+
+// Catalog
+const catalogItems = document.querySelector(".items-js");
+if (catalogItems) {
+  loadProducts();
+}
+
+async function loadProducts() {
+  try {
+    const response = await fetch("./json/products.json");
+    if (!response.ok) {
+      throw new Error("Failed to load products");
+    }
+    const products = await response.json();
+    initProducts(products);
+  } catch (error) {
+    console.error(error);
+    alert("Error loading products!");
+  }
+}
+
+function initProducts(products) {
+  catalogItems.innerHTML = "";
+
+  products.forEach((product) => {
+    const productHTML = `
+      <div class="item-product" data-id="${product.id}">
+        <a href="${
+          product.link
+        }" class="item-product__favorite _icon-favorite ${
+      product.isFavorite ? "active" : ""
+    }"></a>
+        <a href="${product.link}" class="item-product__picture-link">
+          <img src="${product.image.src}" alt="${
+      product.image.alt
+    }" class="item-product__image">
+        </a>
+        <div class="item-product__body">
+          <div class="item-product__right-wrap">
+            <h3 class="item-product__title">
+              <a href="${product.link}" class="item-product__link-title">${
+      product.title
+    }</a>
+            </h3>
+            <div class="item-product__text">
+              ${product.brand}
+            </div>
+          </div>
+          <div class="item-product__left-wrap">
+            <div class="item-product__price">${product.price}</div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    catalogItems.insertAdjacentHTML("beforeend", productHTML);
+  });
+}

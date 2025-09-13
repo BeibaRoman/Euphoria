@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "title": "Black Sweatshirt with ....",
+    "brand": "Jhanvi’s  Brand",
+    "price": "$119.0",
+    "image": {
+      "src": "image/catalog/catalog-1.webp",
+      "alt": "Young woman wearing a loose black oversized sweatshirt with white logo print on the front, standing against a light background, posing casually with hands near her face."
+    },
+    "isFavorite": false,
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "title": "White T-shirt",
+    "brand": "Helen’s  Brand",
+    "price": "$11.0",
+    "image": {
+      "src": "image/catalog/catalog-2.webp",
+      "alt": "Smiling woman dressed in a plain white t-shirt and pink shorts, standing with arms raised above her head in a playful, confident pose."
+    },
+    "isFavorite": false,
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "title": "Levender Hoodie with ....",
+    "brand": "Nike’s  Brand",
+    "price": "$123.00",
+    "image": {
+      "src": "image/catalog/catalog-3.webp",
+      "alt": "Stylish woman in a lavender oversized hoodie with long sleeves, slightly leaning to one side, showing a relaxed and trendy streetwear look."
+    },
+    "isFavorite": false,
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "title": "Leaves Pattern White...",
+    "brand": "paypal’s  Brand",
+    "price": "$77.00",
+    "image": {
+      "src": "image/catalog/catalog-4.webp",
+      "alt": "Woman wearing a white floral patterned blouse tucked into denim shorts, standing against an orange background, smiling and holding her hair with one hand."
+    },
+    "isFavorite": false,
+    "link": "#"
+  },
+  {
+    "id": 5,
+    "title": "White Graphic Crop Top",
+    "brand": "woden’s  Brand",
+    "price": "$29.00",
+    "image": {
+      "src": "image/catalog/catalog-5.webp",
+      "alt": "Cheerful young woman in a white graphic crop top and ripped jeans, standing against an orange background with hands raised near her head in an energetic pose."
+    },
+    "isFavorite": false,
+    "link": "#"
+  },
+  {
+    "id": 6,
+    "title": "Black Shorts",
+    "brand": "MM’s  Brand",
+    "price": "$37.00",
+    "image": {
+      "src": "image/catalog/catalog-6.webp",
+      "alt": "Woman wearing a black short-sleeve t-shirt and red mini skirt, standing in front of a green background, smiling and leaning slightly forward playfully."
+    },
+    "isFavorite": false,
+    "link": "#"
+  },
+  {
+    "id": 7,
+    "title": "Barboreal Gray Sweats...",
+    "brand": "Priya’s  Brand",
+    "price": "$77.00",
+    "image": {
+      "src": "image/catalog/catalog-7.webp",
+      "alt": "Casual look with a woman wearing a light gray oversized sweatshirt, standing against a neutral background with a friendly smile."
+    },
+    "isFavorite": false,
+    "link": "#"
+  },
+  {
+    "id": 8,
+    "title": "Yellow Sweatshirt",
+    "brand": "woden’s  Brand",
+    "price": "$29.00",
+    "image": {
+      "src": "image/catalog/catalog-8.webp",
+      "alt": "Woman dressed in a bright yellow hoodie with the hood strings held in both hands, standing against a blue background and smiling warmly."
+    },
+    "isFavorite": false,
+    "link": "#"
+  },
+  {
+    "id": 9,
+    "title": "Flower Pattern Black C...",
+    "brand": "MM’s  Brand",
+    "price": "$37.00",
+    "image": {
+      "src": "image/catalog/catalog-9.webp",
+      "alt": "Trendy young woman wearing a black t-shirt with a flower print design and denim shorts, standing in front of a green background in a casual pose."
+    },
+    "isFavorite": false,
+    "link": "#"
+  },
+  {
+    "id": 10,
+    "title": "I Don’t Graphic T-shirt",
+    "brand": "Nisargi’s  Brand",
+    "price": "$77.00",
+    "image": {
+      "src": "image/catalog/catalog-10.webp",
+      "alt": "Beige women’s short-sleeve t-shirt with a bold graphic print, displayed on a hanger against a red background."
+    },
+    "isFavorite": false,
+    "link": "#"
+  },
+  {
+    "id": 11,
+    "title": "Blue Flower Print Crop ....",
+    "brand": "Mellon’s  Brand",
+    "price": "$29.00",
+    "image": {
+      "src": "image/catalog/catalog-11.webp",
+      "alt": "Smiling woman wearing a light blue floral dress layered with a denim jacket, standing against a yellow background, posing in a cheerful and stylish way."
+    },
+    "isFavorite": false,
+    "link": "#"
+  },
+  {
+    "id": 12,
+    "title": "line Pattern Black H...",
+    "brand": "AS’s  Brand",
+    "price": "$37.00",
+    "image": {
+      "src": "image/catalog/catalog-12.webp",
+      "alt": "Fashionable woman with curly hair wearing a black striped blazer over a dark top, standing against a red background and posing confidently."
+    },
+    "isFavorite": false,
+    "link": "#"
+  }
+]

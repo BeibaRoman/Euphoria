@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="" class="header__logo">
+          <img src="image/header/logo.svg" alt="Euphoria Logo" class="header__logo-image">
+        </a>
+        <div class="header__menu menu">
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="index.html" class="menu__link">Shop</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Men</a></li>
+              <li class="menu__item"><a href="catalog.html" class="menu__link menu__link--active">Women</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Combos</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Joggers</a></li>
+            </ul>
+          </nav>
+        </div>
+        <form action="#" class="header__search search">
+          <input type="search" class="search__input" placeholder="Search">
+          <button class="search__button _icon-search" type="submit"></button>
+        </form>
+        <div class="header__action action-header">
+          <a href="#" class="action-header__item _icon-favorite"></a>
+          <a href="#" class="action-header__item  _icon-user"></a>
+          <a href=" #" class="action-header__item _icon-cart"></a>
+        </div>
+        <button class="icon-menu" type="button">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page__catalog catalog">
+        <div class="catalog__container">
+          <aside class="catalog__filter filter">
+            <div class="filter__body">
+              <h2 data-spoller="open" class="filter__title title-filter">
+                <button type="button"
+                  class="title-filter__button title-filter__button--main _icon-filter">Filter</button>
+              </h2>
+              <form action="#" class="filter__body">
+                <div class="filter__section section-filter">
+                  <div class="section-filter__body">
+                    <div class="section-filter__style style-filter">
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Tops
+                      </label>
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Printed T-shirts
+                      </label>
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Plain T-shirts
+                      </label>
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Jackets
+                      </label>
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Boxers
+                      </label>
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Full sleeve T-shirts
+                      </label>
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Joggers
+                      </label>
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Pajamas
+                      </label>
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Jeans
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__section section-filter">
+                  <h3 data-spoller="open" class="section-filter__title title-filter">
+                    <button type="button" class="title-filter__button _icon-ch-down">Price</button>
+                  </h3>
+                  <div class="section-filter__body">
+                    <div class="section-filter__price price-filter">
+                      <div class="price-filter__range"></div>
+                      <div class="price-filter__inputs">
+                        <input type="text" name="price-from" class="price-filter__input price-filter__input--from">
+                        <input type="text" name="price-to" class="price-filter__input price-filter__input--to">
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__section section-filter">
+                  <h3 data-spoller="open" class="section-filter__title title-filter">
+                    <button type="button" class="title-filter__button _icon-ch-down">Colors</button>
+                  </h3>
+                  <div class="section-filter__body">
+                    <div class="section-filter__colors colors-filter">
+                      <label style="--color:#8434e1" class="colors-filter__item">
+                        <input type="checkbox" name="color[]" class="colors-filter__input">
+                        Purple
+                      </label>
+                      <label style="--color:#252525" class="colors-filter__item">
+                        <input type="checkbox" name="color[]" class="colors-filter__input">
+                        Black
+                      </label>
+                      <label style="--color:#f35528" class="colors-filter__item">
+                        <input type="checkbox" name="color[]" class="colors-filter__input">
+                        Red
+                      </label>
+                      <label style="--color:#f16f2b" class="colors-filter__item">
+                        <input type="checkbox" name="color[]" class="colors-filter__input">
+                        Orange
+                      </label>
+                      <label style="--color:#345eff" class="colors-filter__item">
+                        <input type="checkbox" name="color[]" class="colors-filter__input">
+                        Navy
+                      </label>
+                      <label style="--color:#fff" class="colors-filter__item colors-filter__item--white">
+                        <input type="checkbox" name="color[]" class="colors-filter__input">
+                        White
+                      </label>
+                      <label style="--color:#d67e3b" class="colors-filter__item">
+                        <input type="checkbox" name="color[]" class="colors-filter__input">
+                        Broom
+                      </label>
+                      <label style="--color:#48bc4e" class="colors-filter__item">
+                        <input type="checkbox" name="color[]" class="colors-filter__input">
+                        Green
+                      </label>
+                      <label style="--color:#fdc761" class="colors-filter__item">
+                        <input type="checkbox" name="color[]" class="colors-filter__input">
+                        Yellow
+                      </label>
+                      <label style="--color: #e4e5e8" class="colors-filter__item">
+                        <input type="checkbox" name="color[]" class="colors-filter__input">
+                        Grey
+                      </label>
+                      <label style="--color:#e08d9d" class="colors-filter__item">
+                        <input type="checkbox" name="color[]" class="colors-filter__input">
+                        Pink
+                      </label>
+                      <label style="--color:#3fdeff" class="colors-filter__item">
+                        <input type="checkbox" name="color[]" class="colors-filter__input">
+                        Blue
+                      </label>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__section section-filter">
+                  <h3 data-spoller="open" class="section-filter__title title-filter">
+                    <button type="button" class="title-filter__button _icon-ch-down">Size</button>
+                  </h3>
+                  <div class="section-filter__body">
+                    <div class="section-filter__size size-filter">
+                      <label class="size-filter__item">
+                        <input type="checkbox" name="size[]" class="size-filter__input">
+                        XXS
+                      </label>
+                      <label class="size-filter__item">
+                        <input type="checkbox" name="size[]" class="size-filter__input">
+                        XL
+                      </label>
+                      <label class="size-filter__item">
+                        <input type="checkbox" name="size[]" class="size-filter__input">
+                        XS
+                      </label>
+                      <label class="size-filter__item">
+                        <input type="checkbox" name="size[]" class="size-filter__input">
+                        S
+                      </label>
+                      <label class="size-filter__item">
+                        <input type="checkbox" name="size[]" class="size-filter__input">
+                        M
+                      </label>
+                      <label class="size-filter__item">
+                        <input type="checkbox" name="size[]" class="size-filter__input">
+                        L
+                      </label>
+                      <label class="size-filter__item">
+                        <input type="checkbox" name="size[]" class="size-filter__input">
+                        XXL
+                      </label>
+                      <label class="size-filter__item">
+                        <input type="checkbox" name="size[]" class="size-filter__input">
+                        3XL
+                      </label>
+                      <label class="size-filter__item">
+                        <input type="checkbox" name="size[]" class="size-filter__input">
+                        4XL
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__section section-filter">
+                  <h3 data-spoller="open" class="section-filter__title title-filter">
+                    <button type="button" class="title-filter__button _icon-ch-down">Dress Style</button>
+                  </h3>
+                  <div class="section-filter__body">
+                    <div class="section-filter__style style-filter">
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Classic
+                      </label>
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Casual
+                      </label>
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Business
+                      </label>
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Sport
+                      </label>
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Elegant
+                      </label>
+                      <label class="style-filter__item _icon-ch-right">
+                        <input type="checkbox" name="style[]" class="style-filter__input">
+                        Formal (evening)
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </aside>
+          <section class="catalog__categories categories">
+            <div class="categories__header">
+              <h1 class="categories__title">Women’s Clothing</h1>
+              <ul class="categories__type">
+                <li class="categories__item">
+                  <button type="button" class="categories__button categories__button--accent">New</button>
+                </li>
+                <li class="categories__item">
+                  <button type="button" class="categories__button">Recommended</button>
+                </li>
+              </ul>
+            </div>
+            <div class="categories__items items items-js">
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__menu footer__menu--margin menu-footer">
+          <div class="menu-footer__block">
+            <h3 class="menu-footer__title">Need Help</h3>
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">Contact Us</a>
+              </li>
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">Track Order</a>
+              </li>
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">Returns & Refunds</a>
+              </li>
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">FAQ's</a>
+              </li>
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">Career</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-footer__block">
+            <h3 class="menu-footer__title">Company</h3>
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">About Us</a>
+              </li>
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">Euphoria Blog</a>
+              </li>
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">Euphoriastan</a>
+              </li>
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">Collaboration</a>
+              </li>
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">Media</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-footer__block">
+            <h3 class="menu-footer__title">More Info</h3>
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">Term and Conditions</a>
+              </li>
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">Privacy Policy</a>
+              </li>
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">Shipping Policy</a>
+              </li>
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-footer__block">
+            <h3 class="menu-footer__title">Location</h3>
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item">
+                <a href="mailto:support@euphoria.in" class="menu-footer__link">support@euphoria.in</a>
+              </li>
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">Eklingpura Chouraha, Ahmedabad Main Road</a>
+              </li>
+              <li class="menu-footer__item">
+                <a href="#" class="menu-footer__link">(NH 8- Near Mahadev Hotel) Udaipur, India- 313002</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__body footer__body--margin">
+          <ul class="footer__socials socials-footer">
+            <li class="socials-footer__item">
+              <a href="#" target="_blank" class="socials-footer__link _icon-s-facebook"></a>
+            </li>
+            <li class="socials-footer__item">
+              <a href="#" target="_blank" class="socials-footer__link _icon-s-instagram"></a>
+            </li>
+            <li class="socials-footer__item">
+              <a href="#" target="_blank" class="socials-footer__link _icon-s-twitter"></a>
+            </li>
+            <li class="socials-footer__item">
+              <a href="#" target="_blank" class="socials-footer__link _icon-s-linkedin"></a>
+            </li>
+          </ul>
+          <div class="footer__download  download-app">
+            <h3 class="download-app__title">Download The App</h3>
+            <div class="download-app__links">
+              <a href="#" target="_blank" class="download-app__link">
+                <img src="image/footer/google.svg"
+                  alt=" Google Play badge with geometric colorful shapes on a dark background and the text Google Play in white, representing a download link for the app. The design is modern and inviting.">
+              </a>
+              <a href="#" target="_blank" class="download-app__link">
+                <img src="image/footer/app-store.svg"
+                  alt="App Store badge with a dark background and the text App Store in white, representing a download link for the app. The design is sleek and modern, inviting users to download the app from the Apple App Store.">
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="footer__categories popular-categories">
+          <h3 data-spoller class="popular-categories__title"><button
+              class="popular-categories__button-title _icon-ch-down">Popular
+              Categories</button>
+          </h3>
+          <div class="popular-categories__body">
+            <ul class="popular-categories__list">
+              <li class="popular-categories__item">
+                <a href="#" class="popular-categories__link">Hoodies</a>
+              </li>
+              <li class="popular-categories__item">
+                <a href="#" class="popular-categories__link">T-Shirts</a>
+              </li>
+              <li class="popular-categories__item">
+                <a href="#" class="popular-categories__link">Joggers</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__copyright">
+          Copyright &copy; 2023 Euphoria Folks Pvt Ltd. All rights reserved.
+        </div>
+
+      </div>
+
+    </footer>
+
+  </div>
+  <!-- wNum -->
+  <script type="module" src="js/wNumb.min.js"></script>
+  <!-- slider -->
+  <script type="module" src="js/nouislider.min.js"></script>
+  <!-- main -->
+  <script type="module" src="js/script.js"></script>
+</body>
+
+</html>

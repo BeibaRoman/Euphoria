@@ -1,0 +1,89 @@
+.catalog {
+
+  // .catalog__container
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    @include adaptiveValue("column-gap", 50, 30);
+  }
+
+  // .catalog__filter
+
+  &__filter {
+    flex: 0 0 toRem(295);
+  }
+
+  // .catalog__categories
+
+  &__categories {
+    flex-grow: 1;
+  }
+}
+
+
+.categories {
+
+  // .categories__header
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: toRem(30);
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 50, 20);
+    }
+  }
+
+  // .categories__title
+
+  &__title {
+    font-weight: 600;
+    font-size: toRem(22);
+    color: #3f4646;
+  }
+
+  // .categories__type
+
+  &__type {
+    display: flex;
+    column-gap: toRem(25);
+  }
+
+  // .categories__item
+
+  &__item {}
+
+  // .categories__button
+
+  &__button {
+    font-weight: 600;
+    font-size: toRem(22);
+    color: #3f4646;
+    transition: color 0.3s ease-in-out;
+
+
+    &:hover {
+      color: $purpleColor;
+    }
+
+    // .categories__button--accent
+
+    &--accent {
+      color: $purpleColor;
+    }
+  }
+
+  // .categories__items
+
+  &__items {}
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: toRem(24);
+  row-gap: toRem(50);
+}
