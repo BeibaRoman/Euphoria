@@ -6,6 +6,11 @@
     display: flex;
     align-items: flex-start;
     @include adaptiveValue("column-gap", 50, 30);
+
+    @media (max-width: toEm(991.98)) {
+      display: block;
+    }
+
   }
 
   // .catalog__filter
@@ -31,18 +36,26 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: toRem(30);
+    gap: toRem(20);
 
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 50, 20);
     }
+
+    @media (max-width: toEm(380.98)) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
   }
 
   // .categories__title
 
   &__title {
     font-weight: 600;
-    font-size: toRem(22);
+    @include adaptiveValue("font-size", 22, 20);
     color: #3f4646;
+    flex-shrink: 0;
   }
 
   // .categories__type
@@ -60,14 +73,18 @@
 
   &__button {
     font-weight: 600;
-    font-size: toRem(22);
+    @include adaptiveValue("font-size", 22, 18);
     color: #3f4646;
     transition: color 0.3s ease-in-out;
 
 
-    &:hover {
-      color: $purpleColor;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $purpleColor;
+      }
     }
+
+
 
     // .categories__button--accent
 
@@ -83,7 +100,7 @@
 
 .items {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(toRem(250), 1fr));
   column-gap: toRem(24);
   row-gap: toRem(50);
 }

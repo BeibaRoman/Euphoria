@@ -16,7 +16,7 @@
     @include adaptiveValue("padding-left", 38, 20, 2, $containerWidth, 480);
     @include adaptiveValue("padding-right", 38, 20, 2, $containerWidth, 480);
 
-    @media (max-width: 480px) {
+    @media (max-width: toEm(480)) {
       margin-right: toRem(-15);
 
     }

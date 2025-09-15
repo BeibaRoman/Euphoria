@@ -23,6 +23,30 @@ if (spollers.length) {
       ? (spoller.nextElementSibling.hidden = true)
       : spoller.classList.add("active");
   });
+  // Filter
+  const filterTitle = document.querySelector(".filter__title");
+  if (filterTitle) {
+    //window.addEventListener('resize', someFunc);
+    const breakPointValue = filterTitle.dataset.spollerMedia;
+    const breakPoint = breakPointValue
+      ? `(${breakPointValue.split(",")[0]}-width:${
+          breakPointValue.split(",")[1]
+        }px)`
+      : null;
+    if (breakPoint) {
+      const matchMedia = window.matchMedia(breakPoint);
+      matchMedia.addEventListener("change", (e) => {
+        const isTrue = e.matches;
+        if (isTrue) {
+          slideUp(filterTitle.nextElementSibling);
+          filterTitle.classList.remove("active");
+        } else {
+          slideDown(filterTitle.nextElementSibling);
+          filterTitle.classList.add("active");
+        }
+      });
+    }
+  }
 }
 
 let slideDown = (target, duration = 500) => {

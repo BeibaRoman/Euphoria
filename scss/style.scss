@@ -156,8 +156,20 @@ body {
   }
 
 
+  // .page__description
+
+  &__description {
+    @include adaptiveValue("padding-top", 50, 15);
+    @include adaptiveValue("padding-bottom", 50, 15);
+  }
 
 
+  // .page__best-price
+
+  &__best-price {
+    @include adaptiveValue("padding-top", 50, 15);
+    @include adaptiveValue("padding-bottom", 100, 30);
+  }
 
 
 }
@@ -186,6 +198,10 @@ body {
 @import "_brands.scss";
 // feedback
 @import "_feedback.scss";
+// description
+@import "_description.scss";
+// best-price
+@import "_best-price.scss";
 /* ======================================================== */
 // pages
 // catalog

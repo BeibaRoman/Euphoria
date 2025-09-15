@@ -124,10 +124,13 @@
       margin-bottom: toRem(18);
     }
 
-
-    &:hover {
-      color: $darkColor;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $darkColor;
+      }
     }
+
+
 
 
     &:has(input:focus-visible) {
@@ -229,15 +232,21 @@
       border: 0.97px solid #f4f1f1;
     }
 
-
-    &:hover::before {
-      transform: scale(1.1);
+    @media (any-hover: hover) {
+      &:hover::before {
+        transform: scale(1.1);
+      }
     }
 
-    &:hover {
-      color: $darkColor;
 
+    @media (any-hover: hover) {
+      &:hover {
+        color: $darkColor;
+
+      }
     }
+
+
 
     &:has(input:focus-visible) {
       outline: toRem(1) solid $darkColor;
@@ -293,6 +302,15 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-in-out;
+
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: $darkColor;
+        background-color: $mainColor;
+        color: $liteColor;
+      }
+    }
 
     &:hover {
       border-color: $darkColor;

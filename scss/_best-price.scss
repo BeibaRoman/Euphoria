@@ -1,0 +1,97 @@
+.best-price {
+
+  // .best-price__container
+
+  &__container {}
+
+  // .best-price__title
+
+  &__title {
+
+    // .best-price__title--addition
+
+    &--addition {
+      @include adaptiveValue("font-size", 28, 20);
+      line-height: 1.2;
+
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 50, 20);
+      }
+    }
+  }
+
+  // .best-price__table
+
+  &__table {}
+}
+
+
+
+.table-best-price {
+  background-color: rgba(246, 246, 246, 0.6);
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: toRem(12);
+  overflow: hidden;
+
+
+
+  tr {
+    &:nth-child(2) {
+      td {
+        @include adaptiveValue("padding-top", 50, 15);
+      }
+    }
+
+    &:last-child {
+      td {
+        @include adaptiveValue("padding-bottom", 50, 15);
+      }
+
+    }
+  }
+
+  th {
+
+    font-family: "Core Sans C", sans-serif;
+    font-weight: 600;
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    color: $darkColor;
+    @include adaptiveValue("padding-top", 50, 15);
+    @include adaptiveValue("padding-bottom", 50, 15);
+    @include adaptiveValue("padding-left", 65, 15);
+    @include adaptiveValue("padding-right", 65, 15);
+    text-align: left;
+    border-bottom: toRem(1) solid rgba(190, 188, 189, 0.4);
+
+    &:not(:last-child) {
+      border-right: toRem(1) solid rgba(190, 188, 189, 0.4);
+    }
+
+    &:first-child {
+      width: 79%;
+    }
+
+    ;
+  }
+
+  td {
+    line-height: 1.2;
+    @include adaptiveValue("font-size", 24, 16);
+    letter-spacing: 0.02em;
+    @include adaptiveValue("padding-top", 25, 7.5);
+    @include adaptiveValue("padding-bottom", 25, 7.5);
+    @include adaptiveValue("padding-left", 65, 15);
+    @include adaptiveValue("padding-right", 65, 15);
+
+    &:not(:last-child) {
+      border-right: toRem(1) solid rgba(190, 188, 189, 0.4);
+    }
+
+
+
+  }
+
+}
