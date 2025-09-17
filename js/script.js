@@ -23,7 +23,7 @@ if (spollers.length) {
       ? (spoller.nextElementSibling.hidden = true)
       : spoller.classList.add("active");
   });
-  // Filter
+  // Filter;
   const filterTitle = document.querySelector(".filter__title");
   if (filterTitle) {
     //window.addEventListener('resize', someFunc);
