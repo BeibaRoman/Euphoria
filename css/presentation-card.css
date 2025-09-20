@@ -1,0 +1,15 @@
+.presentation-card__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.presentation-card__showcase {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+.presentation-card__info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}

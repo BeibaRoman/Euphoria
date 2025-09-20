@@ -1,0 +1,140 @@
+.presentation-card {
+
+  // .presentation-card__container
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  // .presentation-card__gallery
+
+  &__gallery {
+    flex: 0 1 50%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: toRem(34);
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100vw;
+      height: 100%;
+      background-color: #f6f6f6;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+
+  &__wrapper {}
+
+  // .presentation-card__thumbs
+
+  &__thumbs {
+    flex: 0 0 toRem(75);
+    height: toRem(269);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(24);
+    }
+
+  }
+
+  // .presentation-card__thumbs-wrapper
+
+  &__thumbs-wrapper {}
+
+  // .presentation-card__thumb
+
+  &__thumb {
+    width: toRem(75);
+    padding: toRem(4);
+    border: toRem(0.76) solid transparent;
+    border-radius: toRem(12);
+
+    &.swiper-slide-thumb-active {
+      border: toRem(0.76) solid $darkColor;
+
+    }
+
+  }
+
+  // .presentation-card__thumb-image
+  &__thumb-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: top;
+    border-radius: toRem(9);
+    border: toRem(0.53) solid #fff;
+  }
+
+  // .presentation-card__arrows
+  &__arrows {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    gap: toRem(10);
+  }
+
+
+  // .presentation-card__arrow
+
+  &__arrow {
+    width: toRem(22);
+    height: toRem(22);
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: toRem(1) toRem(1) toRem(3) 0 rgba(0, 0, 0, 0.4);
+    color: $darkColor;
+    font-size: toRem(7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+
+    @media (any-hover: hover) {
+
+      &:hover {
+        background-color: $darkColor;
+      }
+
+      &:hover::before {
+        color: #fff;
+      }
+    }
+
+
+  }
+
+  // .presentation-card__main
+
+  &__main {
+    flex: 1 1 auto;
+  }
+
+  // .presentation-card__main-wrapper
+
+  &__main-wrapper {}
+
+  // .presentation-card__slide
+
+  &__slide {}
+
+  // .presentation-card__image
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  // .presentation-card__info
+
+  &__info {
+    flex: 1 1 50%;
+  }
+}

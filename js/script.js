@@ -223,6 +223,36 @@ if (feedbackSlider) {
   });
 }
 
+// Presentation-card slider
+const presentationCardGallery = document.querySelector(
+  ".presentation-card__gallery"
+);
+
+if (presentationCardGallery) {
+  const thumbsSwiper = new Swiper(".presentation-card__thumbs", {
+    // loop: true,
+    direction: "vertical",
+
+    spaceBetween: 22,
+    slidesPerView: 3,
+    watchSlidesProgress: true,
+  });
+
+  const mainSwiper = new Swiper(".presentation-card__main", {
+    loop: true,
+    navigation: {
+      nextEl: ".presentation-card__arrow--next",
+      prevEl: ".presentation-card__arrow--prev",
+    },
+    speed: 800,
+    spaceBetween: 0,
+    slidesPerView: 1,
+
+    thumbs: {
+      swiper: thumbsSwiper,
+    },
+  });
+}
 /* rating */
 document.addEventListener("DOMContentLoaded", () => {
   const ratings = document.querySelectorAll(".rating");
@@ -338,37 +368,28 @@ async function loadProducts() {
 }
 
 function initProducts(products) {
-  catalogItems.innerHTML = "";
-
   products.forEach((product) => {
     const productHTML = `
-      <div class="item-product" data-id="${product.id}">
-        <a href="${
-          product.link
-        }" class="item-product__favorite _icon-favorite ${
-      product.isFavorite ? "active" : ""
-    }"></a>
-        <a href="${product.link}" class="item-product__picture-link">
-          <img src="${product.image.src}" alt="${
-      product.image.alt
-    }" class="item-product__image">
-        </a>
-        <div class="item-product__body">
-          <div class="item-product__right-wrap">
-            <h3 class="item-product__title">
-              <a href="${product.link}" class="item-product__link-title">${
-      product.title
-    }</a>
-            </h3>
-            <div class="item-product__text">
-              ${product.brand}
+    <div class="item-product" id = "${product.id}">
+          <a href="#" class="item-product__favorite _icon-favorite"></a>
+          <a href="${product.link}" class="item-product__picture-link">
+            <img src="${product.image.src}" alt="${product.image.alt}" class="item-product__image">
+          </a>
+          <div class="item-product__body">
+            <div class="item-product__right-wrap">
+              <h3 class="item-product__title">
+                <a href="${product.link}" class="item-product__link-title">${product.title}</a>
+              </h3>
+              <div class="item-product__text">
+                ${product.brand}
+              </div>
+
+            </div>
+            <div class="item-product__left-wrap">
+              <div class="item-product__price">${product.price}</div>
             </div>
           </div>
-          <div class="item-product__left-wrap">
-            <div class="item-product__price">${product.price}</div>
-          </div>
         </div>
-      </div>
     `;
 
     catalogItems.insertAdjacentHTML("beforeend", productHTML);

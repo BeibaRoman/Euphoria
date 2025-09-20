@@ -172,6 +172,15 @@ body {
   }
 
 
+
+  // .page__card
+
+  &__card {}
+
+
+
+
+
 }
 
 
@@ -202,6 +211,10 @@ body {
 @import "_description.scss";
 // best-price
 @import "_best-price.scss";
+// presentation-card
+@import "_presentation-card.scss";
+
+
 /* ======================================================== */
 // pages
 // catalog
