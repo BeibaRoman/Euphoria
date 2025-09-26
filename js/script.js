@@ -254,64 +254,102 @@ if (presentationCardGallery) {
   });
 }
 /* rating */
-document.addEventListener("DOMContentLoaded", () => {
-  const ratings = document.querySelectorAll(".rating");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const ratings = document.querySelectorAll(".rating");
 
-  ratings.forEach((root) => {
-    const group = root.querySelector(".rating__group");
-    const inputs = root.querySelectorAll(".rating__input");
-    const output = root.querySelector(".rating__value");
-    const storageKey = root.dataset.storageKey;
-    const initial = Number(root.dataset.initial || 0);
+//   ratings.forEach((root) => {
+//     const group = root.querySelector(".rating__group");
+//     const inputs = root.querySelectorAll(".rating__input");
+//     const output = root.querySelector(".rating__value");
+//     const storageKey = root.dataset.storageKey;
+//     const initial = Number(root.dataset.initial || 0);
 
-    // 1) Відновити значення з localStorage (пріоритетніше за data-initial)
-    let saved = null;
-    if (storageKey) {
-      try {
-        saved = Number(localStorage.getItem(storageKey));
-      } catch {
-        /* ignore */
-      }
-    }
+//     // 1) Відновити значення з localStorage (пріоритетніше за data-initial)
+//     let saved = null;
+//     if (storageKey) {
+//       try {
+//         saved = Number(localStorage.getItem(storageKey));
+//       } catch {
+//         /* ignore */
+//       }
+//     }
 
-    const setValue = (val) => {
-      // Позначити потрібний input як checked
-      const target = [...inputs].find((i) => Number(i.value) === Number(val));
-      if (target) target.checked = true;
+//     const setValue = (val) => {
+//       // Позначити потрібний input як checked
+//       const target = [...inputs].find((i) => Number(i.value) === Number(val));
+//       if (target) target.checked = true;
 
-      // Оновити output
-      if (output) output.value = String(val);
+//       // Оновити output
+//       if (output) output.value = String(val);
 
-      // Зберегти
-      if (storageKey) {
-        try {
-          localStorage.setItem(storageKey, String(val));
-        } catch {
-          /* ignore */
-        }
-      }
+//       // Зберегти
+//       if (storageKey) {
+//         try {
+//           localStorage.setItem(storageKey, String(val));
+//         } catch {
+//           /* ignore */
+//         }
+//       }
 
-      // Кастомна подія (можеш ловити її зовні)
-      root.dispatchEvent(
-        new CustomEvent("rating:change", {
-          bubbles: true,
-          detail: { value: Number(val) },
-        })
-      );
-    };
+//       // Кастомна подія (можеш ловити її зовні)
+//       root.dispatchEvent(
+//         new CustomEvent("rating:change", {
+//           bubbles: true,
+//           detail: { value: Number(val) },
+//         })
+//       );
+//     };
 
-    // 2) Початкове значення
-    const startVal = saved || initial || 0;
-    if (startVal) setValue(startVal);
-    else if (output) output.value = "0";
+//     // 2) Початкове значення
+//     const startVal = saved || initial || 0;
+//     if (startVal) setValue(startVal);
+//     else if (output) output.value = "0";
 
-    // 3) Слухачі змін
-    group.addEventListener("change", (e) => {
-      const val = e.target?.value;
-      if (val) setValue(val);
-    });
+//     // 3) Слухачі змін
+//     group.addEventListener("change", (e) => {
+//       const val = e.target?.value;
+//       if (val) setValue(val);
+//     });
+//   });
+// });
+
+// Rating
+const ratings = document.querySelectorAll("[data-rating]");
+if (ratings) {
+  ratings.forEach((rating) => {
+    const currentValue = +rating.dataset.rating;
+    currentValue ? starRatingSet(rating, currentValue) : null;
   });
-});
+}
+function starRatingGet(rating, currentElement) {
+  const ratingValue = +currentElement.value;
+  // Тут відправка оцінки (ratingValue) на бекенд...
+  // Уявімо, що ми отримали середню оцінку 3.2
+  const resultRating = 3.2;
+  starRatingSet(rating, resultRating);
+}
+function starRatingSet(rating, value) {
+  const ratingItems = rating.querySelectorAll(".rating__item");
+  const resultFullItems = parseInt(value);
+  const resultPartItem = value - resultFullItems;
+
+  ratingItems.forEach((ratingItem, index) => {
+    ratingItem.classList.remove("active");
+    ratingItem.querySelector("span")
+      ? ratingItems[index].querySelector("span").remove()
+      : null;
+
+    if (index <= resultFullItems - 1) {
+      ratingItem.classList.add("active");
+    }
+    if (index === resultFullItems && resultPartItem) {
+      ratingItem.insertAdjacentHTML(
+        "beforeend",
+        `<span style="width:${resultPartItem * 100}%"></span>`
+      );
+    }
+  });
+}
 
 // noUiSlider
 const filterRange = document.querySelector(".price-filter__range");

@@ -1,140 +1,561 @@
-.presentation-card {
+  .presentation-card {
 
-  // .presentation-card__container
+    // .presentation-card__container
 
-  &__container {
-    display: flex;
-    align-items: flex-start;
-  }
+    &__container {
+      display: flex;
+      align-items: flex-start;
 
-  // .presentation-card__gallery
-
-  &__gallery {
-    flex: 0 1 50%;
-    min-width: 0;
-    display: flex;
-    align-items: center;
-    gap: toRem(34);
-    position: relative;
-
-    &::before {
-      content: "";
-      width: 100vw;
-      height: 100%;
-      background-color: #f6f6f6;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-  }
-
-
-  &__wrapper {}
-
-  // .presentation-card__thumbs
-
-  &__thumbs {
-    flex: 0 0 toRem(75);
-    height: toRem(269);
-
-    &:not(:last-child) {
-      margin-bottom: toRem(24);
+      @media (max-width: toEm(767.98)) {
+        display: block;
+      }
     }
 
-  }
+    // .presentation-card__gallery
 
-  // .presentation-card__thumbs-wrapper
+    &__gallery {
+      flex: 0 1 50%;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: toRem(34);
+      position: relative;
+      max-height: toRem(785);
 
-  &__thumbs-wrapper {}
-
-  // .presentation-card__thumb
-
-  &__thumb {
-    width: toRem(75);
-    padding: toRem(4);
-    border: toRem(0.76) solid transparent;
-    border-radius: toRem(12);
-
-    &.swiper-slide-thumb-active {
-      border: toRem(0.76) solid $darkColor;
-
+      &::before {
+        content: "";
+        width: 100vw;
+        height: 100%;
+        background-color: #f6f6f6;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
     }
 
-  }
 
-  // .presentation-card__thumb-image
-  &__thumb-image {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: top;
-    border-radius: toRem(9);
-    border: toRem(0.53) solid #fff;
-  }
+    &__wrapper {
+      @media (max-width: toEm(867.98)) {
+        display: none;
+      }
+    }
 
-  // .presentation-card__arrows
-  &__arrows {
-    position: relative;
-    display: grid;
-    justify-items: center;
-    gap: toRem(10);
-  }
+    // .presentation-card__thumbs
 
+    &__thumbs {
+      flex: 0 0 toRem(75);
+      height: toRem(269);
 
-  // .presentation-card__arrow
-
-  &__arrow {
-    width: toRem(22);
-    height: toRem(22);
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: toRem(1) toRem(1) toRem(3) 0 rgba(0, 0, 0, 0.4);
-    color: $darkColor;
-    font-size: toRem(7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
-
-    @media (any-hover: hover) {
-
-      &:hover {
-        background-color: $darkColor;
+      &:not(:last-child) {
+        margin-bottom: toRem(24);
       }
 
-      &:hover::before {
+    }
+
+    // .presentation-card__thumbs-wrapper
+
+    &__thumbs-wrapper {}
+
+    // .presentation-card__thumb
+
+    &__thumb {
+      width: toRem(75);
+      padding: toRem(4);
+      border: toRem(0.76) solid transparent;
+      border-radius: toRem(12);
+
+      &.swiper-slide-thumb-active {
+        border: toRem(0.76) solid $darkColor;
+
+      }
+
+    }
+
+    // .presentation-card__thumb-image
+    &__thumb-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: top;
+      border-radius: toRem(9);
+      border: toRem(0.53) solid #fff;
+    }
+
+    // .presentation-card__arrows
+    &__arrows {
+      position: relative;
+      display: grid;
+      justify-items: center;
+      gap: toRem(10);
+    }
+
+
+    // .presentation-card__arrow
+
+    &__arrow {
+      width: toRem(22);
+      height: toRem(22);
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: toRem(1) toRem(1) toRem(3) 0 rgba(0, 0, 0, 0.4);
+      color: $darkColor;
+      font-size: toRem(7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+
+      @media (any-hover: hover) {
+
+        &:hover {
+          background-color: $darkColor;
+        }
+
+        &:hover::before {
+          color: #fff;
+        }
+      }
+
+
+    }
+
+    // .presentation-card__main
+
+    &__main {
+      flex: 1 1 auto;
+    }
+
+    // .presentation-card__main-wrapper
+
+    &__main-wrapper {}
+
+    // .presentation-card__slide
+
+    &__slide {}
+
+    // .presentation-card__image
+
+    &__image {
+      object-fit: cover;
+      object-position: top center;
+      width: 100%;
+      height: auto;
+
+
+      @media (max-width: toEm(767.98)) {
+        max-height: toRem(650); // зроби нижче, щоб не з'їдало багато екрану
+      }
+
+    }
+
+    // .presentation-card__info
+
+    &__info {
+      flex: 1 1 50%;
+      padding-top: toRem(30);
+      @include adaptiveValue("padding-top", 30, 10);
+      @include adaptiveValue("padding-left", 74, 15, 2, $containerWidth, 767.98);
+      display: grid;
+      @include adaptiveValue("gap", 35, 15);
+    }
+
+    // .presentation-card__breadcrumbs
+
+    &__breadcrumbs {}
+
+    // .presentation-card__title
+
+    &__title {
+      font-family: "Core Sans C",
+        sans-serif;
+      font-weight: 600;
+      font-size: toRem(36);
+      @include adaptiveValue("font-size", 36, 22);
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+      color: $darkColor;
+    }
+
+    // .presentation-card__rating-comments
+
+    &__rating-comments {
+      display: flex;
+      align-items: center;
+      @include adaptiveValue("column-gap", 34, 15);
+    }
+
+    // .presentation-card__comments
+
+    &__comments {
+      display: flex;
+      align-items: center;
+      column-gap: toRem(15);
+      @include adaptiveValue("column-gap", 15, 10);
+      font-weight: 500;
+      @include adaptiveValue("font-size", 18, 16);
+
+      color: $mainColor;
+      transition: all 0.3s ease-in-out;
+
+      &::before {
+        @include adaptiveValue("font-size", 18, 16);
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $purpleColor;
+        }
+      }
+
+    }
+
+    // .presentation-card__options
+
+    &__options {}
+
+    // .presentation-card__advantages
+
+    &__advantages {
+      border-top: toRem(1) solid #bebcbd;
+    }
+
+
+  }
+
+  // Breadcrumbs
+  .breadcrumbs {
+    display: flex;
+    font-size: toRem(18);
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 500;
+    flex-wrap: wrap;
+    line-height: 1.22;
+    gap: toRem(15);
+
+    // .breadcrumbs__item
+    &__item {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: toRem(15);
+
+      &::before {
+        font-size: toRem(10);
+      }
+    }
+
+    // .breadcrumbs__link
+    &__link {
+      @media (any-hover: hover) {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    // .breadcrumbs__current
+    &__current {}
+
+    @media (max-width: toEm(767.98)) {
+      display: none;
+    }
+
+  }
+
+  .rating {
+
+    // .rating__group
+
+    &__group {}
+
+    // .rating__input
+
+    &__input {}
+
+    // .rating__star
+
+    &__star {}
+
+    // .rating__value
+
+    &__value {
+      font-weight: 500;
+      @include adaptiveValue("font-size", 18, 16);
+      color: #807d7e;
+    }
+  }
+
+  .options-form {
+
+    // .options-form__sizes
+
+    &__sizes {}
+
+    // .options-form__colors
+
+    &__colors {}
+
+    // .options-form__footer
+
+    &__footer {
+      display: flex;
+      @include adaptiveValue("gap", 25, 10);
+      row-gap: (5);
+      align-items: center;
+
+      @media (max-width: toEm(457.98)) {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+
+    // .options-form__button
+
+    &__button {
+      flex-shrink: 0;
+
+      span {
+        font-weight: 600;
+        font-size: toRem(18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: toRem(12);
+      }
+
+      padding: toRem(14) toRem(40);
+
+
+    }
+
+    // .options-form__price
+
+    &__price {
+      flex-shrink: 0;
+      font-weight: 700;
+      font-size: toRem(18);
+      text-align: center;
+      color: $darkColor;
+
+      border: toRem(1) solid $darkColor;
+      border-radius: toRem(8);
+      padding: toRem(15) toRem(40);
+    }
+  }
+
+  .sizes-product {
+
+    // .sizes-product__header
+
+    &__header {
+      display: flex;
+      column-gap: toRem(20);
+      @include adaptiveValue("margin-bottom", 25, 10);
+    }
+
+    // .sizes-product__title
+
+    &__title {
+      font-weight: 600;
+      font-size: toRem(18);
+      color: #3f4646;
+    }
+
+    // .sizes-product__guide
+
+    &__guide {
+      font-weight: 500;
+      font-size: toRem(18);
+      display: flex;
+      flex-direction: row-reverse;
+      column-gap: toRem(15);
+      @include adaptiveValue("column-gap", 15, 10);
+      transition: all 0.3s ease-in-out;
+
+      &::before {
+        font-size: toRem(14);
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $purpleColor;
+        }
+      }
+
+
+    }
+
+    // .sizes-product__items
+
+    &__items {
+      display: flex;
+      align-items: center;
+      @include adaptiveValue("column-gap", 25, 10);
+      row-gap: toRem(5);
+      flex-wrap: wrap;
+
+    }
+
+    // .sizes-product__item
+
+    &__item {
+      position: relative;
+      font-weight: 500;
+      font-size: toRem(14);
+      text-align: center;
+      color: $darkColor;
+
+      cursor: pointer;
+
+      border: toRem(1.50) solid #bebcbd;
+      border-radius: toRem(12);
+      flex: 0 0 toRem(38);
+      height: toRem(38);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: #fff;
+          background-color: #3c4242;
+          border: toRem(1) solid transparent;
+        }
+      }
+
+      &:has(input:checked) {
+        background-color: $darkColor;
+        border: toRem(1) solid $darkColor;
         color: #fff;
       }
+
+    }
+
+    // .sizes-product__input
+
+    &__input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    &:not(:last-child) {
+      // margin-bottom: toRem(35);
+      @include adaptiveValue("margin-bottom", 35, 15);
+    }
+  }
+
+  .colors-product {
+
+    // .colors-product__title
+
+    &__title {
+      font-weight: 600;
+      font-size: toRem(18);
+      color: #3f4646;
+      @include adaptiveValue("margin-bottom", 25, 10);
+    }
+
+    // .colors-product__items
+
+    &__items {
+      display: flex;
+      @include adaptiveValue("column-gap", 20, 10);
+      row-gap: toRem(5);
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    // .colors-product__item
+
+    &__item {
+      position: relative;
+      flex: 0 0 toRem(22);
+      height: toRem(22);
+      background-color: var(--color);
+      border-radius: 50%;
+
+
+      &:has(input:checked) {
+        &::before {
+          transform: scale(1.3);
+        }
+      }
+
+      &::before {
+        transition: all 0.3s;
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: scale(0.9);
+        border: toRem(1) solid var(--color);
+      }
+    }
+
+    // .colors-product__input
+
+    &__input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 2;
     }
 
 
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 35, 20);
+    }
   }
 
-  // .presentation-card__main
+  .advantages {
 
-  &__main {
-    flex: 1 1 auto;
+    @include adaptiveValue("padding-top", 35, 10);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: toRem(68);
+    @include adaptiveValue("column-gap", 68, 24, 2, $containerWidth, 767.98);
+    row-gap: toRem(20);
+
+    @media (max-width: toEm(543.98)) {
+      @include adaptiveValue("column-gap", 68, 20);
+    }
+
+    @media (max-width: toEm(457.98)) {
+      grid-template-columns: auto;
+    }
+
+
+    // .advantages__item
+
+    &__item {
+      display: flex;
+      gap: toRem(15);
+      align-items: center;
+
+
+      &::before {
+        background-color: $liteColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        flex: 0 0 toRem(44);
+        height: toRem(44);
+
+      }
+
+    }
   }
-
-  // .presentation-card__main-wrapper
-
-  &__main-wrapper {}
-
-  // .presentation-card__slide
-
-  &__slide {}
-
-  // .presentation-card__image
-
-  &__image {
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
-  }
-
-  // .presentation-card__info
-
-  &__info {
-    flex: 1 1 50%;
-  }
-}

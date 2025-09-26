@@ -103,25 +103,106 @@
           </div>
           <!-- Info section -->
           <div class="presentation-card__info">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dolor quos omnis quibusdam, incidunt
-            architecto esse consequuntur recusandae odio laboriosam autem quod dolorem deserunt quo repellat eaque aut?
-            Tempore officia dolorum odit totam. Culpa ducimus aliquid quas neque, tempore eligendi velit quo deleniti
-            incidunt nulla obcaecati iure fuga numquam aspernatur molestiae consequuntur sint reprehenderit odio? Quis
-            quibusdam in ab temporibus quo non, officia impedit aut magnam fuga consequatur quisquam ipsam minus? Quidem
-            molestiae autem iusto qui explicabo expedita ea facilis non architecto sed reiciendis quisquam aperiam earum
-            dignissimos, inventore amet eum doloremque pariatur totam, iure hic! Ut necessitatibus consectetur vel
-            accusantium optio at veritatis deserunt! Rem cum quia, ipsa provident, officia unde eum libero in nesciunt
-            voluptas maxime, quam neque adipisci? Quidem, vitae cumque rem perferendis veritatis nisi deserunt tenetur,
-            maxime eius error omnis qui cupiditate repellat consequuntur obcaecati. Ex, porro molestias beatae
-            recusandae cumque explicabo debitis fuga error autem possimus necessitatibus quae voluptatum dolore. Modi
-            nam aspernatur sed in, culpa, numquam soluta saepe, sequi vero obcaecati neque nobis amet iste eaque nostrum
-            voluptatibus rem mollitia harum. Accusamus ipsum, labore animi incidunt laudantium iure odio omnis. Dolorem
-            doloremque aliquam iure ut expedita. Ab a mollitia cumque fuga, dolores accusantium non et, dolorem nisi
-            nesciunt atque officiis nobis? Dolorum asperiores aut cupiditate maxime molestiae totam ea, ullam recusandae
-            inventore facilis? Debitis, quibusdam sapiente! Sunt dicta unde cumque porro impedit totam quisquam
-            obcaecati ullam dolor repudiandae, corporis nisi nobis doloribus magnam commodi dignissimos aspernatur eos
-            eum corrupti, soluta iure autem. Odit nihil, hic illo quos enim expedita maiores veritatis aliquam voluptate
-            deleniti ad ipsa fugit commodi delectus. Nulla, laborum assumenda error et sapiente sed necessitatibus enim
+            <ul class="presentation-card__breadcrumbs breadcrumbs">
+              <li class="breadcrumbs__item _icon-ch-right">
+                <a href="index.html" class="breadcrumbs__link ">Shop</a>
+              </li>
+              <li class="breadcrumbs__item _icon-ch-right">
+                <a href="catalog.html" class="breadcrumbs__link ">Women</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <span class="breadcrumbs__current">Top</span>
+              </li>
+            </ul>
+            <h1 class="presentation-card__title">Raven Hoodie With <br>
+              Black colored Design</h1>
+            <div class="presentation-card__rating-comments">
+              <!-- Rating -->
+              <div class="rating" id="rating-1" data-storage-key="product-1-rating" data-initial="4">
+                <fieldset class="rating__group" role="radiogroup" aria-labelledby="rating-1-label">
+                  <legend id="rating-1-label" class="visually-hidden"></legend>
+
+                  <input class="rating__input" type="radio" name="rating-1" id="rating-1-5" value="5">
+                  <label class="rating__star" for="rating-1-5" title="5 з 5" aria-label="5 з 5"></label>
+
+                  <input class="rating__input" type="radio" name="rating-1" id="rating-1-4" value="4">
+                  <label class="rating__star" for="rating-1-4" title="4 з 5" aria-label="4 з 5"></label>
+
+                  <input class="rating__input" type="radio" name="rating-1" id="rating-1-3" value="3">
+                  <label class="rating__star" for="rating-1-3" title="3 з 5" aria-label="3 з 5"></label>
+
+                  <input class="rating__input" type="radio" name="rating-1" id="rating-1-2" value="2">
+                  <label class="rating__star" for="rating-1-2" title="2 з 5" aria-label="2 з 5"></label>
+
+                  <input class="rating__input" type="radio" name="rating-1" id="rating-1-1" value="1">
+                  <label class="rating__star" for="rating-1-1" title="1 з 5" aria-label="1 з 5"></label>
+                </fieldset>
+                <div class="rating__value">3.5</div>
+              </div>
+              <!-- Comments -->
+              <a href="#" class="presentation-card__comments _icon-comment">120 comment</a>
+            </div>
+            <form action="#" class="presentation-card__options options-form">
+              <div class="options-form__sizes sizes-product">
+                <div class="sizes-product__header">
+                  <h3 class="sizes-product__title">Select Size</h3>
+                  <a href="#" class="sizes-product__guide _icon-a-right">Size Guide</a>
+                </div>
+                <div class="sizes-product__items">
+                  <label class="sizes-product__item">
+                    XS
+                    <input type="radio" value="xs" class="sizes-product__input" name="product-size">
+                  </label>
+                  <label class="sizes-product__item">
+                    S
+                    <input type="radio" value="s" class="sizes-product__input" name="product-size">
+                  </label>
+                  <label class="sizes-product__item">
+                    M
+                    <input type="radio" value="m" class="sizes-product__input" name="product-size">
+                  </label>
+                  <label class="sizes-product__item">
+                    L
+                    <input type="radio" value="l" class="sizes-product__input" name="product-size">
+                  </label>
+                  <label class="sizes-product__item">
+                    XL
+                    <input type="radio" value="xl" class="sizes-product__input" name="product-size">
+                  </label>
+                </div>
+              </div>
+              <div class="options-form__colors colors-product">
+                <h5 class="colors-product__title">Colours Available</h5>
+                <div class="colors-product__items">
+                  <label style="--color:#8434e1" class="colors-product__item">
+                    <input type="radio" value="#8434e1" class="colors-product__input" name="product-colors">
+                  </label>
+                  <label style="--color:#000000" class="colors-product__item">
+                    <input type="radio" value="#8434e1" class="colors-product__input" name="product-colors">
+                  </label>
+                  <label style="--color:#F35528" class="colors-product__item">
+                    <input type="radio" value="#8434e1" class="colors-product__input" name="product-colors">
+                  </label>
+                  <label style="--color:#F16F2B" class="colors-product__item">
+                    <input type="radio" value="#8434e1" class="colors-product__input" name="product-colors">
+                  </label>
+                  <label style="--color:#345EFF" class="colors-product__item">
+                    <input type="radio" value="#8434e1" class="colors-product__input" name="product-colors">
+                  </label>
+                </div>
+              </div>
+              <div class="options-form__footer">
+                <button type="submit" class="options-form__button button"><span class="_icon-cart">Add to
+                    cart</span></button>
+                <div class="options-form__price">$63.00</div>
+              </div>
+            </form>
+            <div class="presentation-card__advantages advantages">
+              <div class="advantages__item _icon-credit-cart">Secure payment</div>
+              <div class="advantages__item _icon-size-fit">Size & Fit</div>
+              <div class="advantages__item _icon-truck">Free shipping</div>
+              <div class="advantages__item _icon-free-shopping">Free Shipping & Returns</div>
+            </div>
 
           </div>
 

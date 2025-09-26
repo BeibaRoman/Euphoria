@@ -175,7 +175,9 @@ body {
 
   // .page__card
 
-  &__card {}
+  &__card {
+    @include adaptiveValue("padding-bottom", 50, 15);
+  }
 
 
 
