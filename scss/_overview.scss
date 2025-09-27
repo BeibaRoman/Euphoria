@@ -165,3 +165,97 @@
     color: $darkColor;
   }
 }
+
+.user-coments {
+  display: grid;
+  @include adaptiveValue("gap", 25, 10);
+
+  // .user-coments__item
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: toRem(15);
+  }
+
+  // .user-coments__preview
+
+  &__preview {
+    font-size: toRem(20);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: $mainColor;
+    width: toRem(50);
+    height: toRem(50);
+    flex: 0 0 toRem(50);
+    border-radius: 50%;
+    border-color: transparent;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+
+  }
+
+  // .user-coments__body
+
+  &__body {
+    display: grid;
+    gap: toRem(8);
+  }
+
+  // .user-coments__sub-title
+
+  &__sub-title {
+    font-weight: 500;
+    font-size: toRem(16);
+    letter-spacing: 0.02em;
+    color: $darkColor;
+  }
+
+  // .user-coments__text
+
+  &__text {
+    font-weight: 400;
+    @include adaptiveValue("font-size", 16, 14);
+    letter-spacing: 0.02em;
+    color: $mainColor;
+  }
+}
+
+.question-answer {
+  display: grid;
+  @include adaptiveValue("gap", 30, 15);
+
+  // .question-answer__item
+
+  &__item {
+    display: grid;
+    @include adaptiveValue("gap", 20, 10);
+  }
+
+  // .question-answer__question
+
+  &__question {
+    font-weight: 500;
+    font-size: toRem(16);
+    letter-spacing: 0.02em;
+    color: $darkColor;
+  }
+
+  // .question-answer__answer
+
+  &__answer {
+    font-weight: 400;
+    @include adaptiveValue("font-size", 16, 14);
+    letter-spacing: 0.02em;
+    color: $mainColor;
+  }
+}

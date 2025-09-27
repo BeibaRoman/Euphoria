@@ -212,20 +212,20 @@
         <div class="overview__container">
           <h2 class="overview__title title">Product Description</h2>
           <div class="overview__wrapper">
-            <div class="overview__tabs tabs">
+            <div data-tabs class="overview__tabs tabs">
               <ul class="tabs__navigation">
-                <li class="tabs__item">
-                  <button class="tabs__button active">Description</button>
+                <li data-tabs-button class="tabs__item active">
+                  <button class="tabs__button">Description</button>
                 </li>
-                <li class="tabs__item">
+                <li data-tabs-button class="tabs__item">
                   <button class="tabs__button">User comments <span class="tabs__comment-info">21</span></button>
                 </li>
-                <li class="tabs__item">
+                <li data-tabs-button class="tabs__item">
                   <button class="tabs__button">Question & Answer<span class="tabs__quetion-info">4</span></button>
                 </li>
               </ul>
               <div class="tabs__body">
-                <div class="tabs__element">
+                <div data-tabs-element class="tabs__element">
                   <div class="product-description">
                     <div class="product-description__text">
                       <p>100% Bio-washed Cotton – makes the fabric extra soft & silky. Flexible ribbed crew neck.
@@ -262,11 +262,71 @@
 
                   </div>
                 </div>
-                <div class="tabs__element">
+                <div data-tabs-element hidden class="tabs__element">
+                  <div class="user-coments">
+                    <div class="user-coments__item">
+                      <div class="user-coments__preview">FM</div>
+                      <div class="user-coments__body">
+                        <h3 class="user-coments__sub-title">Floyd Miles</h3>
+                        <div class="user-coments__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+                          praesentium?</div>
+                      </div>
 
+                    </div>
+                    <div class="user-coments__item">
+                      <div class="user-coments__preview"><img src="image/feedback/feedback-2.webp" alt=""></div>
+                      <div class="user-coments__body">
+                        <h3 class="user-coments__sub-title">Ronald Richards</h3>
+                        <div class="user-coments__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+                          praesentium?</div>
+                      </div>
+
+                    </div>
+                    <div class="user-coments__item">
+                      <div class="user-coments__preview">SN</div>
+                      <div class="user-coments__body">
+                        <h3 class="user-coments__sub-title">Savannah Nguyen</h3>
+                        <div class="user-coments__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+                          praesentium?</div>
+                      </div>
+
+                    </div>
+                    <div class="user-coments__item">
+                      <div class="user-coments__preview"><img src="image/feedback/feedback-3.webp" alt=""></div>
+                      <div class="user-coments__body">
+                        <h3 class="user-coments__sub-title">Savannah Nguyen</h3>
+                        <div class="user-coments__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+                          praesentium?</div>
+                      </div>
+
+                    </div>
+                  </div>
                 </div>
-                <div class="tabs__element">
-
+                <div data-tabs-element hidden class="tabs__element">
+                  <ul class="question-answer">
+                    <li class="question-answer__item">
+                      <h3 class="question-answer__question">What is the material of the hoodie?</h3>
+                      <div class="question-answer__answer">The hoodie is made from a blend of cotton and polyester,
+                        providing both comfort and durability.</div>
+                    </li>
+                    <li class="question-answer__item">
+                      <h3 class="question-answer__question">Is the hoodie machine washable?</h3>
+                      <div class="question-answer__answer">Yes, the hoodie is machine washable. It is recommended to
+                        wash it in cold water and tumble dry on low heat to maintain its quality.</div>
+                    </li>
+                    <li class="question-answer__item">
+                      <h3 class="question-answer__question">Does the hoodie have a front pocket?</h3>
+                      <div class="question-answer__answer">Yes, the hoodie features a spacious front kangaroo pocket,
+                        perfect for keeping your hands warm or storing small items.</div>
+                    </li>
+                    <li class="question-answer__item">
+                      <h3 class="question-answer__question">What sizes are available for the hoodie?</h3>
+                      <div class="question-answer__answer">The hoodie is available in a range of sizes from Small (S) to
+                        Extra Large (XL). Please refer to our size chart for specific measurements to ensure the best
+                        fit.
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

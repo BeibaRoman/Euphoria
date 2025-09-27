@@ -13,6 +13,10 @@ function documentActions(e) {
     }
     slideToggle(currentElement.nextElementSibling);
   }
+  if (targetElement.closest("[data-tabs-button]")) {
+    const currentElement = targetElement.closest("[data-tabs-button]");
+    setTab(currentElement);
+  }
 }
 
 const spollers = document.querySelectorAll("[data-spoller]");
@@ -432,4 +436,27 @@ function initProducts(products) {
 
     catalogItems.insertAdjacentHTML("beforeend", productHTML);
   });
+}
+
+// Tabs
+function setTab(tabElement) {
+  const tabsParent = tabElement.closest("[data-tabs]");
+
+  const tabsButtons = Array.from(
+    tabsParent.querySelectorAll("[data-tabs-button]")
+  );
+  const tabsActiveButton = tabsParent.querySelector(
+    "[data-tabs-button].active"
+  );
+  tabsActiveButton.classList.remove("active");
+  tabElement.classList.add("active");
+
+  const currentButtonIndex = tabsButtons.indexOf(tabElement);
+  const tabsElements = tabsParent.querySelectorAll("[data-tabs-element]");
+
+  tabsElements.forEach((tabsElement) => {
+    tabsElement.hidden = true;
+  });
+
+  tabsElements[currentButtonIndex].hidden = false;
 }

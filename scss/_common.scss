@@ -369,6 +369,24 @@ $star-full: url('../image/star/full-star.svg');
 
   &__item {
     flex-shrink: 0;
+
+    &.active {
+      font-weight: 500;
+      color: #3c4242;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 50%;
+        height: toRem(1);
+        background-color: $darkColor;
+        border-radius: toRem(2);
+
+      }
+    }
   }
 
   // .tabs__button
@@ -387,24 +405,6 @@ $star-full: url('../image/star/full-star.svg');
       }
     }
 
-
-    &.active {
-      font-weight: 500;
-      color: #3c4242;
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 50%;
-        height: toRem(2);
-        background-color: $darkColor;
-        border-radius: toRem(2);
-
-      }
-    }
   }
 
   // .tabs__comment-info
