@@ -183,6 +183,24 @@ body {
 
 
 
+  // .page__overview
+
+  &__overview {
+    @include adaptiveValue("padding-top", 50, 15);
+    @include adaptiveValue("padding-bottom", 50, 15);
+  }
+
+  // .page__similar-product
+
+  &__similar-product {
+    @include adaptiveValue("padding-top", 50, 15);
+    @include adaptiveValue("padding-bottom", 100, 30);
+  }
+
+
+
+
+
 }
 
 
@@ -215,6 +233,8 @@ body {
 @import "_best-price.scss";
 // presentation-card
 @import "_presentation-card.scss";
+// overview
+@import "_overview.scss";
 
 
 /* ======================================================== */

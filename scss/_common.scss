@@ -345,3 +345,98 @@ $star-full: url('../image/star/full-star.svg');
     }
   }
 }
+
+
+// Tabs
+.tabs {
+  display: grid;
+  @include adaptiveValue("gap", 30, 15);
+
+  // .tabs__navigation
+
+  &__navigation {
+    display: flex;
+    @include adaptiveValue("gap", 30, 10, 2, $containerWidth, 767.98);
+    align-items: flex-start;
+
+    @media (max-width: toEm(767.98)) {
+      @include adaptiveValue("gap", 30, 15);
+      flex-wrap: wrap;
+    }
+  }
+
+  // .tabs__item
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  // .tabs__button
+
+  &__button {
+    @include adaptiveValue("font-size", 18, 16);
+    display: flex;
+    align-items: flex-start;
+    @include adaptiveValue("gap", 15, 10);
+    @include adaptiveValue("padding-bottom", 18, 10);
+    transition: color 0.3s ease-in-out;
+
+    @media (any-hover:hover) {
+      &:hover {
+        color: $darkColor;
+      }
+    }
+
+
+    &.active {
+      font-weight: 500;
+      color: #3c4242;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 50%;
+        height: toRem(2);
+        background-color: $darkColor;
+        border-radius: toRem(2);
+
+      }
+    }
+  }
+
+  // .tabs__comment-info
+
+  &__comment-info {
+    font-weight: 500;
+    font-size: toRem(10);
+    text-align: center;
+    color: #fff;
+    background-color: $purpleColor;
+    padding: toRem(4) toRem(6) toRem(4) toRem(5);
+    border-radius: toRem(4);
+  }
+
+  // .tabs__quetion-info
+
+  &__quetion-info {
+    font-weight: 500;
+    font-size: toRem(10);
+    text-align: center;
+    color: #fff;
+
+    background-color: $darkColor;
+    padding: toRem(4) toRem(6) toRem(4) toRem(5);
+    border-radius: toRem(4);
+  }
+
+  // .tabs__body
+
+  &__body {}
+
+  // .tabs__element
+
+  &__element {}
+}
