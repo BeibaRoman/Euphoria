@@ -143,7 +143,7 @@
 
 
       @media (max-width: toEm(767.98)) {
-        max-height: toRem(650); // зроби нижче, щоб не з'їдало багато екрану
+        max-height: toRem(650);
       }
 
     }
@@ -161,7 +161,11 @@
 
     // .presentation-card__breadcrumbs
 
-    &__breadcrumbs {}
+    &__breadcrumbs {
+      @media (max-width: toEm(767.98)) {
+        display: none;
+      }
+    }
 
     // .presentation-card__title
 
@@ -222,45 +226,6 @@
 
   }
 
-  // Breadcrumbs
-  .breadcrumbs {
-    display: flex;
-    font-size: toRem(18);
-    @include adaptiveValue("font-size", 18, 14);
-    font-weight: 500;
-    flex-wrap: wrap;
-    line-height: 1.22;
-    gap: toRem(15);
-
-    // .breadcrumbs__item
-    &__item {
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      gap: toRem(15);
-
-      &::before {
-        font-size: toRem(10);
-      }
-    }
-
-    // .breadcrumbs__link
-    &__link {
-      @media (any-hover: hover) {
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    // .breadcrumbs__current
-    &__current {}
-
-    @media (max-width: toEm(767.98)) {
-      display: none;
-    }
-
-  }
 
   .rating {
 

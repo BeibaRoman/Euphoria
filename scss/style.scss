@@ -200,6 +200,12 @@ body {
 
 
 
+  // .page__cart
+
+  &__cart {
+    @include adaptiveValue("padding-top", 50, 15);
+  }
+
 
 }
 
@@ -241,6 +247,9 @@ body {
 // pages
 // catalog
 @import "_catalog.scss";
+// add-to-cart
+@import "_add-to-cart.scss";
+
 
 /* ======================================================== */
 // Footer

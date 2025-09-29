@@ -347,6 +347,44 @@ $star-full: url('../image/star/full-star.svg');
 }
 
 
+// Breadcrumbs
+.breadcrumbs {
+  display: flex;
+  font-size: toRem(18);
+  @include adaptiveValue("font-size", 18, 14);
+  font-weight: 500;
+  flex-wrap: wrap;
+  line-height: 1.22;
+  gap: toRem(15);
+
+  // .breadcrumbs__item
+  &__item {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: toRem(15);
+
+    &::before {
+      font-size: toRem(10);
+    }
+  }
+
+  // .breadcrumbs__link
+  &__link {
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // .breadcrumbs__current
+  &__current {
+    color: $darkColor;
+  }
+
+}
+
 // Tabs
 .tabs {
   display: grid;
