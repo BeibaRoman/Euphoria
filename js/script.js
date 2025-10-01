@@ -460,23 +460,3 @@ function setTab(tabElement) {
 
   tabsElements[currentButtonIndex].hidden = false;
 }
-// практика !!!!!!!
-
-const clients = ["Mango", "Ajax", "Poly", "Kiwi"];
-
-clients.splice(1, 1);
-console.log(clients);
-
-clients.splice(1, 0, "Lux", "Jay");
-console.log(clients);
-
-clients.splice(2, 1, "Chelsy");
-console.log(clients);
-
-const oldClients = ["Mango", "Ajax", "Poly", "Kiwi"];
-const newClients = ["Monkong", "Singu"];
-
-const allClientsWithOldAndFirst = oldClients.concat(newClients);
-console.log(oldClients);
-console.log(newClients);
-console.log(allClientsWithOldAndFirst);
