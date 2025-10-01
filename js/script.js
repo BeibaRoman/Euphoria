@@ -412,27 +412,27 @@ async function loadProducts() {
 function initProducts(products) {
   products.forEach((product) => {
     const productHTML = `
-    <div class="item-product" id = "${product.id}">
-          <a href="#" class="item-product__favorite _icon-favorite"></a>
-          <a href="${product.link}" class="item-product__picture-link">
-            <img src="${product.image.src}" alt="${product.image.alt}" class="item-product__image">
-          </a>
-          <div class="item-product__body">
-            <div class="item-product__right-wrap">
-              <h3 class="item-product__title">
-                <a href="${product.link}" class="item-product__link-title">${product.title}</a>
-              </h3>
-              <div class="item-product__text">
-                ${product.brand}
-              </div>
+      <div class="item-product" id = "${product.id}">
+            <a href="#" class="item-product__favorite _icon-favorite"></a>
+            <a href="${product.link}" class="item-product__picture-link">
+              <img src="${product.image.src}" alt="${product.image.alt}" class="item-product__image">
+            </a>
+            <div class="item-product__body">
+              <div class="item-product__right-wrap">
+                <h3 class="item-product__title">
+                  <a href="${product.link}" class="item-product__link-title">${product.title}</a>
+                </h3>
+                <div class="item-product__text">
+                  ${product.brand}
+                </div>
 
-            </div>
-            <div class="item-product__left-wrap">
-              <div class="item-product__price">${product.price}</div>
+              </div>
+              <div class="item-product__left-wrap">
+                <div class="item-product__price">${product.price}</div>
+              </div>
             </div>
           </div>
-        </div>
-    `;
+      `;
 
     catalogItems.insertAdjacentHTML("beforeend", productHTML);
   });
@@ -460,3 +460,23 @@ function setTab(tabElement) {
 
   tabsElements[currentButtonIndex].hidden = false;
 }
+// практика !!!!!!!
+
+const clients = ["Mango", "Ajax", "Poly", "Kiwi"];
+
+clients.splice(1, 1);
+console.log(clients);
+
+clients.splice(1, 0, "Lux", "Jay");
+console.log(clients);
+
+clients.splice(2, 1, "Chelsy");
+console.log(clients);
+
+const oldClients = ["Mango", "Ajax", "Poly", "Kiwi"];
+const newClients = ["Monkong", "Singu"];
+
+const allClientsWithOldAndFirst = oldClients.concat(newClients);
+console.log(oldClients);
+console.log(newClients);
+console.log(allClientsWithOldAndFirst);
