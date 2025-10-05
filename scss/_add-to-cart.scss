@@ -10,7 +10,7 @@
         column-gap: toRem(20);
 
         @media (max-width: toEm(797.98)) {
-          grid-template-columns: 2fr 1fr 1fr 0.5fr;
+          grid-template-columns: 2fr 1fr 1fr;
           row-gap: toRem(20);
         }
       }
@@ -136,7 +136,7 @@
       }
 
       @media (max-width: toEm(797.98)) {
-        grid-template-columns: 2fr 1fr 1fr 0.5fr;
+        grid-template-columns: 2fr 1fr 1fr;
         @include adaptiveValue("row-gap", 25, 15);
       }
 
@@ -232,6 +232,11 @@
         }
       }
 
+      @media (max-width: toEm(797.98)) {
+        grid-column: 3 / 4;
+      }
+
+
 
     }
 
@@ -297,6 +302,14 @@
       letter-spacing: 0.02em;
       color: $darkColor;
       @include adaptiveValue("margin-bottom", 9, 6);
+
+
+      @media (any-hover:hover) {
+        &:hover a {
+          text-decoration: underline;
+        }
+      }
+
     }
 
     // .product-cart__color

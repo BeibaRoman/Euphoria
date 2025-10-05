@@ -257,65 +257,6 @@ if (presentationCardGallery) {
     },
   });
 }
-/* rating */
-// document.addEventListener("DOMContentLoaded", () => {
-//   const ratings = document.querySelectorAll(".rating");
-
-//   ratings.forEach((root) => {
-//     const group = root.querySelector(".rating__group");
-//     const inputs = root.querySelectorAll(".rating__input");
-//     const output = root.querySelector(".rating__value");
-//     const storageKey = root.dataset.storageKey;
-//     const initial = Number(root.dataset.initial || 0);
-
-//     // 1) Відновити значення з localStorage (пріоритетніше за data-initial)
-//     let saved = null;
-//     if (storageKey) {
-//       try {
-//         saved = Number(localStorage.getItem(storageKey));
-//       } catch {
-//         /* ignore */
-//       }
-//     }
-
-//     const setValue = (val) => {
-//       // Позначити потрібний input як checked
-//       const target = [...inputs].find((i) => Number(i.value) === Number(val));
-//       if (target) target.checked = true;
-
-//       // Оновити output
-//       if (output) output.value = String(val);
-
-//       // Зберегти
-//       if (storageKey) {
-//         try {
-//           localStorage.setItem(storageKey, String(val));
-//         } catch {
-//           /* ignore */
-//         }
-//       }
-
-//       // Кастомна подія (можеш ловити її зовні)
-//       root.dispatchEvent(
-//         new CustomEvent("rating:change", {
-//           bubbles: true,
-//           detail: { value: Number(val) },
-//         })
-//       );
-//     };
-
-//     // 2) Початкове значення
-//     const startVal = saved || initial || 0;
-//     if (startVal) setValue(startVal);
-//     else if (output) output.value = "0";
-
-//     // 3) Слухачі змін
-//     group.addEventListener("change", (e) => {
-//       const val = e.target?.value;
-//       if (val) setValue(val);
-//     });
-//   });
-// });
 
 // Rating
 const ratings = document.querySelectorAll("[data-rating]");
@@ -412,27 +353,27 @@ async function loadProducts() {
 function initProducts(products) {
   products.forEach((product) => {
     const productHTML = `
-      <div class="item-product" id = "${product.id}">
-            <a href="#" class="item-product__favorite _icon-favorite"></a>
-            <a href="${product.link}" class="item-product__picture-link">
-              <img src="${product.image.src}" alt="${product.image.alt}" class="item-product__image">
-            </a>
-            <div class="item-product__body">
-              <div class="item-product__right-wrap">
-                <h3 class="item-product__title">
-                  <a href="${product.link}" class="item-product__link-title">${product.title}</a>
-                </h3>
-                <div class="item-product__text">
-                  ${product.brand}
-                </div>
+            <div class="item-product" id = "${product.id}">
+                  <a href="#" class="item-product__favorite _icon-favorite"></a>
+                  <a href="${product.link}" class="item-product__picture-link">
+                    <img src="${product.image.src}" alt="${product.image.alt}" class="item-product__image">
+                  </a>
+                  <div class="item-product__body">
+                    <div class="item-product__right-wrap">
+                      <h3 class="item-product__title">
+                        <a href="${product.link}" class="item-product__link-title">${product.title}</a>
+                      </h3>
+                      <div class="item-product__text">
+                        ${product.brand}
+                      </div>
 
-              </div>
-              <div class="item-product__left-wrap">
-                <div class="item-product__price">${product.price}</div>
-              </div>
-            </div>
-          </div>
-      `;
+                    </div>
+                    <div class="item-product__left-wrap">
+                      <div class="item-product__price">${product.price}</div>
+                    </div>
+                  </div>
+                </div>
+            `;
 
     catalogItems.insertAdjacentHTML("beforeend", productHTML);
   });
