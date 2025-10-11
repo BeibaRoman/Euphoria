@@ -6,7 +6,14 @@
 
   // .overview__title
 
-  &__title {}
+  &__title {
+
+    &--margin {
+
+      @include adaptiveValue("margin-bottom", 30, 15);
+    }
+
+  }
 
   // .overview__wrapper
 
@@ -56,9 +63,7 @@
   }
 }
 
-.title {
-  @include adaptiveValue("margin-bottom", 30, 15);
-}
+
 
 .tabs {
 
